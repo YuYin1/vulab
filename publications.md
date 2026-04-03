@@ -1,8 +1,9 @@
 ---
 title: Publications
-subtitle: Browse papers, preprints, and reports
+# subtitle: Browse papers, preprints, and reports
 layout: page
 show_sidebar: false
+hero_height: is-small
 ---
 
 <style>
@@ -67,3 +68,6 @@ show_sidebar: false
 
 # 2024
 {% bibliography --query @*[year=2024] %}
+
+# 2023
+{% bibliography --query @*[year=2023] %}

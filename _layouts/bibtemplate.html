@@ -43,6 +43,14 @@
 
     function togglePlain{{ entry.key | replace: '-','' | replace: ':','' }}() {
         var panel = document.getElementById('plain-{{ entry.key }}');
+        if (panel && !panel.dataset.generated) {
+            var reference = document.getElementById('{{ entry.key }}');
+            var plainContent = panel.querySelector('pre');
+            if (reference && plainContent) {
+                plainContent.textContent = reference.textContent.replace(/\s+/g, ' ').trim();
+                panel.dataset.generated = 'true';
+            }
+        }
         panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
     }
 
@@ -53,5 +61,5 @@
 </script>
 
 <div id="bibtex-{{ entry.key }}" class="publication-panel"><pre>{{ entry.bibtex }}</pre></div>
-<div id="plain-{{ entry.key }}" class="publication-panel"><pre>{{ entry.author }}, "{{ entry.title }}," {{ entry.journal }}{{ entry.booktitle }}{{ entry.note }}, {{ entry.year }}.</pre></div>
+<div id="plain-{{ entry.key }}" class="publication-panel"><pre></pre></div>
 <div id="abstract-{{ entry.key }}" class="publication-panel"><pre>{{ entry.abstract }}</pre></div>

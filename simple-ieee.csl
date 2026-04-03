@@ -77,7 +77,7 @@
       </if>
       <else>
         <names variable="author">
-          <name name-as-sort-order="all" and="text" sort-separator=", " initialize-with="." delimiter-precedes-last="never" delimiter=", "/>
+          <name and="text" delimiter-precedes-last="never" delimiter=", "/>
           <label form="short" prefix=" " suffix="." text-case="lowercase" strip-periods="true"/>
           <substitute>
             <names variable="editor"/>
@@ -89,7 +89,7 @@
   </macro>
   <macro name="editor">
     <names variable="editor">
-      <name initialize-with=". " delimiter=", " and="text"/>
+      <name delimiter=", " and="text"/>
       <label form="short" prefix=", " text-case="capitalize-first" suffix="." strip-periods="true"/>
     </names>
   </macro>
@@ -214,7 +214,7 @@
               <text macro="title" suffix=". "/>
             </group>
             <group display="block csl-author" delimiter="">
-              <text macro="author" prefix="By " suffix="."/>
+              <text macro="author" suffix="."/>
             </group>
             <group display="block csl-event" delimiter=", ">
               <text macro="event"/>
@@ -230,7 +230,7 @@
               <text macro="title" suffix="."/>
             </group>
             <group display="block csl-author" delimiter="">
-              <text macro="author" prefix="By " suffix="."/>
+              <text macro="author" suffix="."/>
             </group>
             <group display="block csl-event" delimiter=", ">
               <text macro="event"/>
@@ -246,7 +246,7 @@
               <text macro="title" suffix="."/>
             </group>
             <group display="block csl-author" delimiter=" ">
-              <text macro="author" prefix="By " suffix="."/>
+              <text macro="author" suffix="."/>
             </group>
             <text variable="genre"/>
             <text macro="publisher"/>
@@ -263,7 +263,7 @@
               <text macro="title" suffix="."/>
             </group>
             <group display="block csl-author" delimiter=" ">
-              <text macro="author" prefix="By " suffix=". "/>
+              <text macro="author" suffix=". "/>
             </group>
             <group display="block csl-event" delimiter=", ">
               <text variable="genre"/>
@@ -298,7 +298,7 @@
           <group display="block csl-content" delimiter=" ">
             <text macro="title" suffix=", "/>
             <group display="block csl-author" delimiter=" ">
-              <text macro="author" prefix="By " suffix=". "/>
+              <text macro="author" suffix=". "/>
             </group>
             <group delimiter=", ">
               <text variable="note" font-style="italic"/>
@@ -337,7 +337,7 @@
               <text macro="title" suffix="."/>
             </group>
             <group display="block csl-author" delimiter="">
-              <text macro="author" prefix="By " suffix="."/>
+              <text macro="author" suffix="."/>
             </group>
             <group display="block csl-event" delimiter="">
               <text macro="event" prefix="" suffix=""/>
