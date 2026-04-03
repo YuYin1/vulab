@@ -8,7 +8,7 @@ tags:
   - Visual Understanding
   - Open-World Perception
 summary: We are building a placeholder benchmark suite for evaluating open-world visual understanding across long-tail scene categories, ambiguous contexts, and multimodal evidence.
-image: /bulma-clean-theme/img/highlights/highlight-01.svg
+image: /img/highlights/highlight-01.svg
 show_sidebar: false
 ---
 

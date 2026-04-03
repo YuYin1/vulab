@@ -8,7 +8,7 @@ tags:
   - Robustness
   - Real-World Autonomy
 summary: We are designing placeholder navigation pipelines that remain stable under scene changes, sensor degradation, and unpredictable real-world dynamics.
-image: /bulma-clean-theme/img/highlights/highlight-03.svg
+image: /img/highlights/highlight-03.svg
 show_sidebar: false
 ---
 

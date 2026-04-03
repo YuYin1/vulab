@@ -8,7 +8,7 @@ tags:
   - Embodied AI
   - Long-Horizon Planning
 summary: We are prototyping placeholder systems that combine spatial memory, semantic retrieval, and planning to support embodied agents acting over long horizons.
-image: /bulma-clean-theme/img/highlights/highlight-02.svg
+image: /img/highlights/highlight-02.svg
 show_sidebar: false
 ---
 
