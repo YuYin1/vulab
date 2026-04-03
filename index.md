@@ -1,57 +1,37 @@
 ---
-title: Bulma Clean Theme
-subtitle: This is the demo site for Bulma Clean Theme
+title: VU Lab
+subtitle: We research Visual Understanding and Spatial Intelligence
 layout: page
-callouts: home_callouts
-show_sidebar: true
+show_sidebar: false
+hero_links:
+  - text: See Our Team
+    link: /team/
+  - text: See Our Research
+    link: /research/
 ---
 
-# Bulma Clean Theme demo website
+# About Us
 
-This website showcases the options for the Bulma Clean theme. The theme is available as a ruby gem or can be used with GitHub pages. 
+VU Lab studies visual understanding and spatial intelligence for robust embodied systems. We focus on perception, spatial reasoning, and decision-making methods that help intelligent agents interpret complex environments and act reliably in the real world.
 
-[![Gem Version](https://badge.fury.io/rb/bulma-clean-theme.svg)](https://badge.fury.io/rb/bulma-clean-theme)
-![Gem](https://img.shields.io/gem/dt/bulma-clean-theme.svg)
-![GitHub Repo stars](https://img.shields.io/github/stars/chrisrhymes/bulma-clean-theme?style=social)
+Our work spans scene understanding, 3D perception, language-guided reasoning, and spatial intelligence. This homepage now provides direct entry points to the lab team and research overview.
 
-## Maintenance and Support
+# Highlights
+{% assign posts = site.posts | where:"categories","highlights" %}
+<div class="columns is-multiline">
+  {% for post in posts %}
+  <div class="column is-4-desktop is-6-tablet">
+    {% include post-card.html %}
+  </div>
+  {% endfor %}
+</div>
 
-If you would like to help support the maintenance of this theme then the theme can be found on GitHub. 
+## Focus Areas
 
-[View the GitHub repo](https://github.com/chrisrhymes/bulma-clean-theme)
+* Visual understanding for complex real-world scenes
+* Spatial intelligence for embodied reasoning and planning
+* Scalable learning systems for perception and autonomy
 
-[Sponsor on GitHub](https://github.com/sponsors/chrisrhymes)
+## Explore
 
-## Ruby Gem
-
-The ruby gem is available on the Ruby Gems website at the following location: 
-
-[https://rubygems.org/gems/bulma-clean-theme](https://rubygems.org/gems/bulma-clean-theme).
-
-## Documentation
-
-For full instructions, please see the [Documentation](/bulma-clean-theme/docs/)
-
-## Page Layouts
-
-This demo site showcases the available page layout options. 
-
-* [Landing Page With Callouts](/bulma-clean-theme/landing/)
-* [Promo Page](/bulma-clean-theme/promo-page/)
-* [Links Page](/bulma-clean-theme/links/)
-* [Sponsors Page](/bulma-clean-theme/sponsors/)
-* [Image Gallery](/bulma-clean-theme/gallery/)
-* [Recipe Page](/bulma-clean-theme/example-recipe/)
-* [Blog](/bulma-clean-theme/blog/)
-* [Post](/bulma-clean-theme/2021/10/30/creating-a-post-series/)
-
-## Page components
-
-Standard pages can also use the following components:
-
-* Sidebar
-* Menubar
-* Tabs
-* Footer
-* Hero
-* Contents
+Use the navigation above to browse the lab's team, research, publications, teaching, culture, outreach, and contact pages.

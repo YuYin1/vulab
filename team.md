@@ -1,0 +1,69 @@
+---
+title: Team
+subtitle: Meet the people behind VU Lab
+layout: page
+show_sidebar: false
+---
+
+This page mirrors the SAIR Lab style at a high level by grouping members into core lab roles.
+
+The profiles below are placeholders and can be replaced with real names, bios, headshots, and personal pages.
+
+{% assign principal_investigators = site.team | where: "group", "Principal Investigator" | sort: "order" %}
+{% assign phd_students = site.team | where: "group", "PhD Students" | sort: "order" %}
+
+## Principal Investigator
+
+<div class="columns is-multiline team-grid">
+	{% for member in principal_investigators %}
+		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+			<a href="{{ member.url | relative_url }}" class="team-member-link">
+				<div class="card team-member-card">
+					<div class="card-image">
+						{% if member.image %}
+							<figure class="image is-3by3">
+								<img src="{{ member.image | relative_url }}" alt="{{ member.title }}">
+							</figure>
+						{% else %}
+							<figure class="image is-3by3 team-member-photo">
+								<div class="team-member-placeholder">{{ member.placeholder_label }}</div>
+							</figure>
+						{% endif %}
+					</div>
+					<div class="card-content has-text-centered">
+						<p class="title is-6">{{ member.title }}</p>
+						<p class="subtitle is-6">{{ member.subtitle }}</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+</div>
+
+## PhD Students
+
+<div class="columns is-multiline team-grid">
+	{% for member in phd_students %}
+		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+			<a href="{{ member.url | relative_url }}" class="team-member-link">
+				<div class="card team-member-card">
+					<div class="card-image">
+						{% if member.image %}
+							<figure class="image is-3by3">
+								<img src="{{ member.image | relative_url }}" alt="{{ member.title }}">
+							</figure>
+						{% else %}
+							<figure class="image is-3by3 team-member-photo">
+								<div class="team-member-placeholder">{{ member.placeholder_label }}</div>
+							</figure>
+						{% endif %}
+					</div>
+					<div class="card-content has-text-centered">
+						<p class="title is-6">{{ member.title }}</p>
+						<p class="subtitle is-6">{{ member.subtitle }}</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	{% endfor %}
+</div>

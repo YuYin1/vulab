@@ -1,0 +1,57 @@
+---
+---
+<div class="text-justify">
+    {{ reference }}
+    <script>
+        (function() {
+            var reference = document.getElementById('{{ entry.key }}');
+            if (!reference) {
+                return;
+            }
+            reference.innerHTML = reference.innerHTML.replace(/^\[\d+\]\s*/, '');
+        })();
+    </script>
+    <div class="publication-actions buttons are-small">
+        <button class="button is-light" onclick="toggleBibtex{{ entry.key | replace: '-','' | replace: ':','' }}()">bibtex</button>
+        <button class="button is-light" onclick="togglePlain{{ entry.key | replace: '-','' | replace: ':','' }}()">plain text</button>
+        {% if entry.abstract %}
+            <button class="button is-light" onclick="toggleAbstract{{ entry.key | replace: '-','' | replace: ':','' }}()">abstract</button>
+        {% endif %}
+        {% if entry.doi %}
+            <a class="button is-light" href="{{ entry.doi | prepend: 'https://doi.org/' }}" aria-label="doi link for paper">doi</a>
+        {% endif %}
+        {% if entry.preprint %}
+            <a class="button is-light" href="{{ entry.preprint }}">preprint</a>
+        {% endif %}
+        {% if entry.url %}
+            <a class="button is-light" href="{{ entry.url | escape }}" aria-label="pdf link for paper">link</a>
+        {% endif %}
+        {% if entry.video %}
+            <a class="button is-light" href="{{ entry.video }}" aria-label="video link for paper">video</a>
+        {% endif %}
+        {% if entry.code %}
+            <a class="button is-light" href="{{ entry.code }}">code</a>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    function toggleBibtex{{ entry.key | replace: '-','' | replace: ':','' }}() {
+        var panel = document.getElementById('bibtex-{{ entry.key }}');
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function togglePlain{{ entry.key | replace: '-','' | replace: ':','' }}() {
+        var panel = document.getElementById('plain-{{ entry.key }}');
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function toggleAbstract{{ entry.key | replace: '-','' | replace: ':','' }}() {
+        var panel = document.getElementById('abstract-{{ entry.key }}');
+        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
+
+<div id="bibtex-{{ entry.key }}" class="publication-panel"><pre>{{ entry.bibtex }}</pre></div>
+<div id="plain-{{ entry.key }}" class="publication-panel"><pre>{{ entry.author }}, "{{ entry.title }}," {{ entry.journal }}{{ entry.booktitle }}{{ entry.note }}, {{ entry.year }}.</pre></div>
+<div id="abstract-{{ entry.key }}" class="publication-panel"><pre>{{ entry.abstract }}</pre></div>

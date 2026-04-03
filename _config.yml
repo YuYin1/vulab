@@ -1,7 +1,7 @@
 # Site Settings
 lang: en
-title: Bulma Clean Theme
-tagline: Bulma Clean Theme
+title: VU Lab
+tagline: VU Lab
 email: your-email@domain.com
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
@@ -32,6 +32,7 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-scholar
   - kramdown-parser-gfm
   - jekyll-redirect-from
 
@@ -72,13 +73,29 @@ defaults:
       layout: post
       image: https://picsum.photos/id/16/800/600
       show_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "team"
+    values:
+      layout: team-member
+      show_sidebar: false
 
 markdown: kramdown
 highlighter: rouge
 
+scholar:
+  style: simple-ieee.csl
+  bibliography: references.bib
+  bibliography_template: bibtemplate
+  bibliography_list_tag: ol
+
 footer_menu: example_footer_menu
 
 collections:
+  team:
+    output: true
+    permalink: /team/:name/
   products: 
     output: true
     layout: product

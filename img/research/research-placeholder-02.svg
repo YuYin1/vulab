@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Project 02</title>
+  <desc id="desc">Illustration for a placeholder research project on planning and spatial intelligence.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5a189a"/>
+      <stop offset="100%" stop-color="#9d4edd"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M118 462L118 138L682 138L682 462Z" fill="none" stroke="#f7ecff" stroke-width="12" opacity="0.9"/>
+  <path d="M160 420L280 300L380 340L530 210L640 258" fill="none" stroke="#f7ecff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="280" cy="300" r="18" fill="#ffffff"/>
+  <circle cx="530" cy="210" r="18" fill="#ffffff"/>
+  <text x="52" y="536" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff">Spatial Planning</text>
+</svg>

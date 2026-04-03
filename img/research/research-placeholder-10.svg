@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Project 10</title>
+  <desc id="desc">Illustration for a placeholder research project on policy learning and generalization.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#283618"/>
+      <stop offset="100%" stop-color="#87a330"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <path d="M146 420C222 356 292 318 364 306C444 292 522 236 654 168" fill="none" stroke="#f7ffe8" stroke-width="16" stroke-linecap="round"/>
+  <circle cx="220" cy="356" r="18" fill="#ffffff"/>
+  <circle cx="364" cy="306" r="18" fill="#ffffff"/>
+  <circle cx="510" cy="244" r="18" fill="#ffffff"/>
+  <circle cx="654" cy="168" r="18" fill="#ffffff"/>
+  <path d="M150 450H650" fill="none" stroke="#f7ffe8" stroke-width="10" opacity="0.55" stroke-linecap="round"/>
+  <text x="52" y="536" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff">Policy Learning</text>
+</svg>

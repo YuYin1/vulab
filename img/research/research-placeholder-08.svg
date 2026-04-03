@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder Project 08</title>
+  <desc id="desc">Illustration for a placeholder research project on retrieval and semantic memory.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3c096c"/>
+      <stop offset="100%" stop-color="#c77dff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <rect x="144" y="150" width="512" height="300" rx="28" fill="none" stroke="#fbf0ff" stroke-width="12"/>
+  <circle cx="246" cy="246" r="56" fill="none" stroke="#ffffff" stroke-width="14"/>
+  <path d="M286 286L346 346" fill="none" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+  <rect x="396" y="206" width="180" height="20" rx="10" fill="#fbf0ff" opacity="0.85"/>
+  <rect x="396" y="252" width="144" height="20" rx="10" fill="#fbf0ff" opacity="0.65"/>
+  <rect x="396" y="298" width="198" height="20" rx="10" fill="#fbf0ff" opacity="0.5"/>
+  <text x="52" y="536" font-family="Montserrat, Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff">Retrieval and Memory</text>
+</svg>

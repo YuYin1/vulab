@@ -1,0 +1,47 @@
+---
+layout: default
+---
+
+<div class="columns is-variable is-6">
+    <div class="column is-4-desktop is-12-tablet">
+        <div class="card team-profile-card">
+            <div class="card-image">
+                {% if page.image %}
+                    <figure class="image is-3by3">
+                        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+                    </figure>
+                {% else %}
+                    <div class="team-profile-placeholder">{{ page.placeholder_label }}</div>
+                {% endif %}
+            </div>
+            <div class="card-content has-text-centered">
+                <p class="title is-5">{{ page.title }}</p>
+                <p class="subtitle is-6">{{ page.subtitle }}</p>
+                {% if page.expertise %}
+                    <p>{{ page.expertise }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="box team-profile-meta">
+            {% if page.email %}
+                <p><strong>Email:</strong> <a href="mailto:{{ page.email }}">{{ page.email }}</a></p>
+            {% endif %}
+            {% if page.personal_page %}
+                <p><strong>Personal page:</strong> <a href="{{ page.personal_page }}">{{ page.personal_page }}</a></p>
+            {% endif %}
+            {% if page.scholar %}
+                <p><strong>Google Scholar:</strong> <a href="{{ page.scholar }}">Profile</a></p>
+            {% endif %}
+            {% if page.location %}
+                <p><strong>Location:</strong> {{ page.location }}</p>
+            {% endif %}
+            <p><strong>Team page:</strong> <a href="{{ '/team/' | relative_url }}">Back to Team</a></p>
+        </div>
+    </div>
+    <div class="column is-8-desktop is-12-tablet">
+        <div class="content">
+            {{ content }}
+        </div>
+    </div>
+</div>
