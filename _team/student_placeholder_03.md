@@ -5,7 +5,7 @@ description: Placeholder member page for a VU Lab PhD student profile.
 group: PhD Students
 order: 3
 placeholder_label: S3
-image: /img/team/student-placeholder-03.svg
+image: /img/team/JerryPeng.JPG
 expertise: Spatial memory, navigation, and decision-making in complex environments.
 email: student03@vulab.example
 personal_page: https://example.com/student-placeholder-03

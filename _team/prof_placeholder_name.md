@@ -5,7 +5,7 @@ description: Placeholder member page for the principal investigator profile.
 group: Principal Investigator
 order: 1
 placeholder_label: PI
-image: /img/team/prof-placeholder-name.svg
+image: /img/team/yuyin.jpg
 expertise: Visual understanding, spatial intelligence, and embodied AI systems.
 email: pi@vulab.example
 personal_page: https://example.com/prof-placeholder-name

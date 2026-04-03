@@ -5,7 +5,7 @@ description: Placeholder member page for a VU Lab PhD student profile.
 group: PhD Students
 order: 4
 placeholder_label: S4
-image: /img/team/student-placeholder-04.svg
+image: /img/team/tuoLiang.png
 expertise: Geometry-aware learning, SLAM, and robust perception systems.
 email: student04@vulab.example
 personal_page: https://example.com/student-placeholder-04

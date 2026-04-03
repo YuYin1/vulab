@@ -5,7 +5,7 @@ description: Placeholder member page for a VU Lab PhD student profile.
 group: PhD Students
 order: 1
 placeholder_label: S1
-image: /img/team/student-placeholder-01.svg
+image: /img/team/yirenLu.jpeg
 expertise: 3D scene understanding, multimodal perception, and long-horizon reasoning.
 email: student01@vulab.example
 personal_page: https://example.com/student-placeholder-01

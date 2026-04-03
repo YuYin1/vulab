@@ -1,8 +1,10 @@
 ---
 title: VU Lab
-subtitle: We research Visual Understanding and Spatial Intelligence
+subtitle: We research <strong>Visual Understanding</strong> and <strong>Spatial Intelligence</strong>
 layout: page
 show_sidebar: false
+hero_image: /img/about.jpg
+hero_darken: true
 hero_links:
   - text: See Our Team
     link: /team/
