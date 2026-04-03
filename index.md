@@ -34,4 +34,4 @@ Our work spans scene understanding, 3D perception, language-guided reasoning, an
 
 ## Explore
 
-Use the navigation above to browse the lab's team, research, publications, teaching, culture, outreach, and contact pages.
+Use the navigation above to browse the lab's team, research, publications, and contact pages.
