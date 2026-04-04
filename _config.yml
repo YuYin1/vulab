@@ -80,6 +80,7 @@ defaults:
     values:
       layout: team-member
       show_sidebar: false
+      hero_height: is-small
 
 markdown: kramdown
 highlighter: rouge
