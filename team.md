@@ -21,7 +21,7 @@ The profiles below are placeholders and can be replaced with real names, bios, h
 
 <div class="columns is-multiline team-grid">
 	{% for member in principal_investigators %}
-		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+		<div class="column is-one-fifth-desktop is-6-tablet">
 			<a href="{{ member.url | relative_url }}" class="team-member-link">
 				<div class="card team-member-card">
 					<div class="card-image">
@@ -49,7 +49,7 @@ The profiles below are placeholders and can be replaced with real names, bios, h
 
 <div class="columns is-multiline team-grid">
 	{% for member in phd_students %}
-		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+		<div class="column is-one-fifth-desktop is-6-tablet">
 			<a href="{{ member.url | relative_url }}" class="team-member-link">
 				<div class="card team-member-card">
 					<div class="card-image">
@@ -77,7 +77,7 @@ The profiles below are placeholders and can be replaced with real names, bios, h
 
 <div class="columns is-multiline team-grid">
 	{% for member in collaborators %}
-		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+		<div class="column is-one-fifth-desktop is-6-tablet">
 			<a href="{{ member.url | relative_url }}" class="team-member-link">
 				<div class="card team-member-card">
 					<div class="card-image">
@@ -105,7 +105,7 @@ The profiles below are placeholders and can be replaced with real names, bios, h
 
 <div class="columns is-multiline team-grid">
 	{% for member in undergrads %}
-		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+		<div class="column is-one-fifth-desktop is-6-tablet">
 			<a href="{{ member.url | relative_url }}" class="team-member-link">
 				<div class="card team-member-card">
 					<div class="card-image">
@@ -133,7 +133,7 @@ The profiles below are placeholders and can be replaced with real names, bios, h
 
 <div class="columns is-multiline team-grid">
 	{% for member in robots %}
-		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+		<div class="column is-one-fifth-desktop is-6-tablet">
 			<a href="{{ member.url | relative_url }}" class="team-member-link">
 				<div class="card team-member-card">
 					<div class="card-image">
@@ -161,7 +161,7 @@ The profiles below are placeholders and can be replaced with real names, bios, h
 
 <div class="columns is-multiline team-grid">
 	{% for member in zoo %}
-		<div class="column is-one-fifth-desktop is-3-tablet is-6-mobile">
+		<div class="column is-one-fifth-desktop is-6-tablet">
 			<a href="{{ member.url | relative_url }}" class="team-member-link">
 				<div class="card team-member-card">
 					<div class="card-image">

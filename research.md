@@ -168,10 +168,18 @@ hero_height: is-small
 	background: #0f172a;
 }
 
+.research-card-image {
+	background: #ffffff;
+}
+
+.research-card-image .image {
+	background: #ffffff;
+}
+
 .research-card-image img {
 	display: block;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 	width: 100%;
 }
 
