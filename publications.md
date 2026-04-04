@@ -1,6 +1,6 @@
 ---
 title: Publications
-# subtitle: Browse papers, preprints, and reports
+subtitle: Our research is pblished in top-tier venues
 layout: page
 show_sidebar: false
 hero_height: is-small

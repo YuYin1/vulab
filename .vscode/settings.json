@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "*.html": "liquid"
+        "*.html": "liquid",
+        "search.json": "liquid"
     },
     "[liquid]": {
         "editor.defaultFormatter": "Shopify.theme-check-vscode",

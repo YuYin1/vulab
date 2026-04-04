@@ -1,7 +1,23 @@
+{% if post.image or post.video %}
+    {% assign has_media = true %}
+{% else %}
+    {% assign has_media = false %}
+{% endif %}
+
 <div class="card">
-    {% if post.image %}
-        <div class="card-image">
-            <img src="{{ post.image }}" alt="{{ post.title }}">
+    {% if has_media %}
+        <div class="card-image{% if post.video %} post-card-media{% endif %}">
+            {% if post.video %}
+                <figure class="image is-4by3">
+                    <div class="post-card-video-frame">
+                        <video class="post-card-video" autoplay muted loop playsinline preload="metadata"{% if post.video_poster %} poster="{{ post.video_poster | relative_url }}"{% elsif post.image %} poster="{{ post.image | relative_url }}"{% endif %} aria-label="{{ post.title }} video preview">
+                            <source src="{{ post.video | relative_url }}" type="video/mp4">
+                        </video>
+                    </div>
+                </figure>
+            {% else %}
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+            {% endif %}
         </div>
     {% else %}
         <header class="card-header">
@@ -10,7 +26,7 @@
     {% endif %}
     <div class="card-content">
         <div class="content">
-            {% if post.image %}
+            {% if has_media %}
                 <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             {% endif %}
             {% if post.summary %}

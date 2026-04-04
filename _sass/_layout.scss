@@ -131,3 +131,33 @@ div.highlight {
 .team-profile-meta p {
     margin-bottom: 0.75rem;
 }
+
+.post-card-media {
+    background: #0f172a;
+    overflow: hidden;
+}
+
+.post-card-media .image {
+    background: #0f172a;
+}
+
+.post-card-video-frame {
+    align-items: center;
+    background: #0f172a;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.post-card-video {
+    background: #0f172a;
+    display: block;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+}
