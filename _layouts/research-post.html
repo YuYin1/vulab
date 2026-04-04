@@ -1,0 +1,37 @@
+---
+layout: default
+---
+{% if page.video %}
+    <style>
+        .research-media {
+            margin: 0 0 1.5rem;
+        }
+
+        .research-media video {
+            background: #000;
+            border-radius: 1rem;
+            box-shadow: 0 1rem 2.5rem rgba(15, 23, 42, 0.14);
+            display: block;
+            width: 100%;
+        }
+    </style>
+
+    <div class="research-media">
+        <video controls playsinline preload="metadata"{% if page.video_poster %} poster="{{ page.video_poster | relative_url }}"{% endif %}>
+            <source src="{{ page.video | relative_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+{% endif %}
+
+<div class="content">
+    {{ content }}
+</div>
+
+{% if page.tags %}
+    <div class="tags my-4">
+        {% for tag in page.tags %}
+            {% include tag.html tag=tag %}
+        {% endfor %}
+    </div>
+{% endif %}
