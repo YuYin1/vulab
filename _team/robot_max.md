@@ -1,18 +1,18 @@
 ---
 title: Max
-subtitle: Robot
-description: VU Lab robot Max.
+subtitle: Unitree Go2 Quadruped Robot
+description: VU Lab quadruped robot Max.
 group: Robot
 order: 1
-placeholder_label: Max
+image: /img/team/Max.jpg
 layout: team-member
 show_sidebar: false
 ---
 
-Max is a robot platform used in VU Lab for research in perception, navigation, and embodied AI.
+Max is a Unitree Go2 quadruped robot at VU Lab, used for research in autonomous navigation, terrain adaptation, and embodied AI.
 
 ## Capabilities
 
-* Autonomous navigation
-* Environment perception
-* Embodied task execution
+* Agile quadrupedal locomotion
+* Autonomous navigation and mapping
+* Environment perception and exploration

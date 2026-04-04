@@ -1,18 +1,18 @@
 ---
 title: Charlie
-subtitle: Robot
-description: VU Lab robot Charlie.
+subtitle: Unitree Go2 Quadruped Robot
+description: VU Lab quadruped robot Charlie.
 group: Robot
 order: 2
-placeholder_label: Charlie
+image: /img/team/Charlie.jpg
 layout: team-member
 show_sidebar: false
 ---
 
-Charlie is a robot platform used in VU Lab for research in perception, navigation, and embodied AI.
+Charlie is a Unitree Go2 quadruped robot at VU Lab, used for research in autonomous navigation, terrain adaptation, and embodied AI.
 
 ## Capabilities
 
-* Autonomous navigation
-* Environment perception
-* Embodied task execution
+* Agile quadrupedal locomotion
+* Autonomous navigation and mapping
+* Environment perception and exploration
