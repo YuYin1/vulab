@@ -1,6 +1,6 @@
 ---
 title: Publications
-subtitle: Our research is pblished in top-tier venues
+subtitle: Our research is published in top-tier venues
 layout: page
 show_sidebar: false
 hero_height: is-small
