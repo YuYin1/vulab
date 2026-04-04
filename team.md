@@ -6,10 +6,6 @@ show_sidebar: false
 hero_height: is-small
 ---
 
-This page mirrors the SAIR Lab style at a high level by grouping members into core lab roles.
-
-The profiles below are placeholders and can be replaced with real names, bios, headshots, and personal pages.
-
 {% assign principal_investigators = site.team | where: "group", "Principal Investigator" | sort: "order" %}
 {% assign phd_students = site.team | where: "group", "PhD Students" | sort: "order" %}
 {% assign collaborators = site.team | where: "group", "Long-term Collaborators" | sort: "order" %}
