@@ -3,6 +3,7 @@ title: Research
 subtitle: We advance state-of-the-art autonomous systems.
 layout: page
 show_sidebar: false
+hero_height: is-small
 ---
 
 {% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" %}

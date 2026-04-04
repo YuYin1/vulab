@@ -3,6 +3,7 @@ title: Contact & Opening Positions
 subtitle: Get in touch with VU Lab and learn about current openings
 layout: page
 show_sidebar: false
+hero_height: is-small
 ---
 
 We welcome research collaborations, student inquiries, and applications from people interested in visual understanding, spatial intelligence, embodied AI, and robotics.
