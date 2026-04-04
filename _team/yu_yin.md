@@ -9,7 +9,7 @@ image: /img/team/yuyin.jpg
 expertise: Visual understanding, spatial intelligence, and embodied AI systems.
 email: pi@vulab.example
 personal_page: https://example.com/prof-placeholder-name
-scholar: https://scholar.google.com/
+scholar_profile: https://scholar.google.com/
 location: VU Lab, Department Building
 ---
 

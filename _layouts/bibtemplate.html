@@ -1,7 +1,7 @@
 ---
 ---
 <div class="text-justify">
-    {{ reference }}
+    {{reference}}
     <script>
         (function() {
             var reference = document.getElementById('{{ entry.key }}');
@@ -11,55 +11,73 @@
             reference.innerHTML = reference.innerHTML.replace(/^\[\d+\]\s*/, '');
         })();
     </script>
-    <div class="publication-actions buttons are-small">
-        <button class="button is-light" onclick="toggleBibtex{{ entry.key | replace: '-','' | replace: ':','' }}()">bibtex</button>
-        <button class="button is-light" onclick="togglePlain{{ entry.key | replace: '-','' | replace: ':','' }}()">plain text</button>
-        {% if entry.abstract %}
-            <button class="button is-light" onclick="toggleAbstract{{ entry.key | replace: '-','' | replace: ':','' }}()">abstract</button>
-        {% endif %}
-        {% if entry.doi %}
-            <a class="button is-light" href="{{ entry.doi | prepend: 'https://doi.org/' }}" aria-label="doi link for paper">doi</a>
-        {% endif %}
-        {% if entry.preprint %}
-            <a class="button is-light" href="{{ entry.preprint }}">preprint</a>
-        {% endif %}
-        {% if entry.url %}
-            <a class="button is-light" href="{{ entry.url | escape }}" aria-label="pdf link for paper">link</a>
-        {% endif %}
-        {% if entry.video %}
-            <a class="button is-light" href="{{ entry.video }}" aria-label="video link for paper">video</a>
-        {% endif %}
-        {% if entry.code %}
-            <a class="button is-light" href="{{ entry.code }}">code</a>
-        {% endif %}
-    </div>
-</div>
+    <br />
+    <button class="button0" type="button" onclick="toggle{{ entry.key | replace: '-','' | replace: ':','' }}()">bibtex</button>
 
-<script>
-    function toggleBibtex{{ entry.key | replace: '-','' | replace: ':','' }}() {
-        var panel = document.getElementById('bibtex-{{ entry.key }}');
-        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    }
-
-    function togglePlain{{ entry.key | replace: '-','' | replace: ':','' }}() {
-        var panel = document.getElementById('plain-{{ entry.key }}');
-        if (panel && !panel.dataset.generated) {
-            var reference = document.getElementById('{{ entry.key }}');
-            var plainContent = panel.querySelector('pre');
-            if (reference && plainContent) {
-                plainContent.textContent = reference.textContent.replace(/\s+/g, ' ').trim();
-                panel.dataset.generated = 'true';
+    <script>
+        function toggle{{ entry.key | replace: '-','' | replace: ':','' }}() {
+            var panel = document.getElementById('a{{ entry.key }}');
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
             }
         }
-        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    }
+    </script>
 
-    function toggleAbstract{{ entry.key | replace: '-','' | replace: ':','' }}() {
-        var panel = document.getElementById('abstract-{{ entry.key }}');
-        panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
-    }
-</script>
+    <button class="button3" type="button" onclick="toggle3{{ entry.key | replace: '-','' | replace: ':','' }}()">plain text</button>
 
-<div id="bibtex-{{ entry.key }}" class="publication-panel"><pre>{{ entry.bibtex }}</pre></div>
-<div id="plain-{{ entry.key }}" class="publication-panel"><pre></pre></div>
-<div id="abstract-{{ entry.key }}" class="publication-panel"><pre>{{ entry.abstract }}</pre></div>
+    <script>
+        function toggle3{{ entry.key | replace: '-','' | replace: ':','' }}() {
+            var panel = document.getElementById('c{{ entry.key }}');
+            if (panel && !panel.dataset.generated) {
+                var reference = document.getElementById('{{ entry.key }}');
+                var plainContent = panel.querySelector('pre');
+                if (reference && plainContent) {
+                    plainContent.textContent = reference.textContent.replace(/\s+/g, ' ').trim();
+                    panel.dataset.generated = 'true';
+                }
+            }
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        }
+    </script>
+
+    {% if entry.abstract %}
+        <button class="button3" type="button" onclick="toggle2{{ entry.key | replace: '-','' | replace: ':','' }}()">abstract</button>
+    {% endif %}
+
+    <script>
+        function toggle2{{ entry.key | replace: '-','' | replace: ':','' }}() {
+            var panel = document.getElementById('b{{ entry.key }}');
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        }
+    </script>
+
+    {% if entry.doi %}
+        <a href="{{ entry.doi | prepend: 'https://doi.org/' }}" aria-label="doi link for paper"><input type="button" class="button1" value="doi" /></a>
+    {% endif %}
+    {% if entry.preprint %}
+        <a href="{{ entry.preprint }}"><input type="button" class="button2" value="preprint" /></a>
+    {% endif %}
+    {% if entry.url %}
+        <a href="{{ entry.url | escape }}" aria-label="pdf link for paper"><input type="button" class="button4" value="link" /></a>
+    {% endif %}
+    {% if entry.video %}
+        <a href="{{ entry.video }}" aria-label="video link for paper"><input type="button" class="button5" value="video" /></a>
+    {% endif %}
+    {% if entry.code %}
+        <a href="{{ entry.code }}"><input type="button" class="button3" value="code" /></a>
+    {% endif %}
+</div>
+
+<div id="a{{ entry.key }}" class="publication-panel"><pre>{{ entry.bibtex }}</pre></div>
+<div id="b{{ entry.key }}" class="publication-panel"><pre>{{ entry.abstract }}</pre></div>
+<div id="c{{ entry.key }}" class="publication-panel"><pre></pre></div>

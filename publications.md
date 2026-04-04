@@ -40,13 +40,102 @@ hero_height: is-small
     counter-increment: list;
 }
 
-.publication-actions {
-    margin-top: 0.5rem;
+.button0 {
+    background-color: #003A70;
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 7px;
+    font-weight: bold;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
-.publication-actions .button {
-    margin-right: 0.5rem;
-    margin-bottom: 0.5rem;
+.button1,
+.button2,
+.button3,
+.button4 {
+    background-color: #003A70;
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 7px;
+    font-weight: bold;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button5 {
+    background-color: #003A70;
+    border: none;
+    color: white;
+    padding: 2px 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 8px;
+    font-weight: bold;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (min-width: 48em) {
+    .button0 {
+        background-color: #003A70;
+        border: none;
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        font-weight: bold;
+        margin-left: 20px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .button1,
+    .button2,
+    .button3,
+    .button4 {
+        background-color: #003A70;
+        border: none;
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        font-weight: bold;
+        margin: 2px 1px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .button5 {
+        background-color: #003A70;
+        border: none;
+        color: white;
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        font-weight: bold;
+        margin: 2px 1px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
 }
 
 .publication-panel {

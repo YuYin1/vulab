@@ -1,6 +1,144 @@
 ---
 layout: default
 ---
+{% assign publication_given_name = nil %}
+{% assign publication_family_name = nil %}
+{% if page.publication_author %}
+    {% assign explicit_author_parts = page.publication_author | split: ', ' %}
+    {% if explicit_author_parts.size == 2 %}
+        {% assign publication_family_name = explicit_author_parts[0] | strip %}
+        {% assign publication_given_name = explicit_author_parts[1] | strip %}
+    {% endif %}
+{% endif %}
+{% if publication_given_name == nil or publication_family_name == nil %}
+    {% assign publication_name_parts = page.title | split: ' ' %}
+    {% if publication_name_parts.size == 2 %}
+        {% assign publication_given_name = publication_name_parts[0] | strip %}
+        {% assign publication_family_name = publication_name_parts[1] | strip %}
+    {% endif %}
+{% endif %}
+{% if publication_given_name and publication_family_name %}
+    {% capture publication_count_raw %}{% bibliography_count --query @*[author ~= {{ publication_family_name }} && author ~= {{ publication_given_name }}] %}{% endcapture %}
+    {% assign publication_count = publication_count_raw | strip | plus: 0 %}
+{% endif %}
+
+<style>
+    .team-publications {
+        margin-top: 2rem;
+    }
+
+    .team-publications .button0 {
+        background-color: #003A70;
+        border: none;
+        color: white;
+        padding: 2px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 7px;
+        font-weight: bold;
+        margin-left: 0;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .team-publications .text-justify > br {
+        display: none;
+    }
+
+    .team-publications .button1,
+    .team-publications .button2,
+    .team-publications .button3,
+    .team-publications .button4 {
+        background-color: #003A70;
+        border: none;
+        color: white;
+        padding: 2px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 7px;
+        font-weight: bold;
+        margin: 2px 1px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .team-publications .button5 {
+        background-color: #003A70;
+        border: none;
+        color: white;
+        padding: 2px 4px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 8px;
+        font-weight: bold;
+        margin: 2px 1px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    @media (min-width: 48em) {
+        .team-publications .button0 {
+            background-color: #003A70;
+            border: none;
+            color: white;
+            padding: 4px 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .team-publications .button1,
+        .team-publications .button2,
+        .team-publications .button3,
+        .team-publications .button4 {
+            background-color: #003A70;
+            border: none;
+            color: white;
+            padding: 4px 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: bold;
+            margin: 2px 1px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .team-publications .button5 {
+            background-color: #003A70;
+            border: none;
+            color: white;
+            padding: 4px 8px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: bold;
+            margin: 2px 1px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    }
+
+    .team-publications .publication-panel {
+        display: none;
+        margin-top: 0.75rem;
+    }
+
+    .team-publications .publication-panel pre {
+        white-space: pre-wrap;
+        word-break: break-word;
+    }
+</style>
 
 <div class="columns is-variable is-6-desktop is-3-tablet is-multiline">
     <div class="column is-4-desktop is-12-tablet is-12-mobile">
@@ -30,8 +168,8 @@ layout: default
             {% if page.personal_page %}
                 <p><strong>Personal page:</strong> <a href="{{ page.personal_page }}">{{ page.personal_page }}</a></p>
             {% endif %}
-            {% if page.scholar %}
-                <p><strong>Google Scholar:</strong> <a href="{{ page.scholar }}">Profile</a></p>
+            {% if page.scholar_profile %}
+                <p><strong>Google Scholar:</strong> <a href="{{ page.scholar_profile }}">Profile</a></p>
             {% endif %}
             {% if page.location %}
                 <p><strong>Location:</strong> {{ page.location }}</p>
@@ -43,5 +181,16 @@ layout: default
         <div class="content">
             {{ content }}
         </div>
+
+        {% if publication_given_name and publication_family_name %}
+            <div class="content team-publications">
+                <h2>Publications</h2>
+                {% if publication_count == 0 %}
+                    <p>No publications listed yet.</p>
+                {% else %}
+                    {% bibliography --query @*[author ~= {{ publication_family_name }} && author ~= {{ publication_given_name }}] %}
+                {% endif %}
+            </div>
+        {% endif %}
     </div>
 </div>

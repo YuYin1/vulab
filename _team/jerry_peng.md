@@ -7,6 +7,7 @@ order: 3
 placeholder_label: S3
 image: /img/team/JerryPeng.JPG
 expertise: Spatial memory, navigation, and decision-making in complex environments.
+publication_author: Peng, Jierui
 email: student03@vulab.example
 personal_page: https://example.com/student-placeholder-03
 location: VU Lab, Graduate Office

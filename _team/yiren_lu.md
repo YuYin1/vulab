@@ -9,7 +9,7 @@ image: /img/team/yirenLu.jpeg
 expertise: 3D Vision, Embodied AI, Robotics.
 email: yiren.lu@case.edu
 personal_page: https://yiren-lu.com
-scholar: https://scholar.google.com/citations?user=8euSVtcAAAAJ
+scholar_profile: https://scholar.google.com/citations?user=8euSVtcAAAAJ
 location: Olin 704
 ---
 

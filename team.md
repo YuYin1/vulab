@@ -1,6 +1,6 @@
 ---
 title: Team
-subtitle: Meet the people behind VU Lab
+subtitle: We're lucky to have a wonderful group of people
 layout: page
 show_sidebar: false
 hero_height: is-small

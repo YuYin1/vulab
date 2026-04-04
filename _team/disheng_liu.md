@@ -8,7 +8,7 @@ image: /img/team/dishengLiu.png
 expertise: Computer Vision, Vision-Language Models, and Spatial Intelligence.
 email: disheng.liu@case.edu
 personal_page: https://dishengll.github.io/
-scholar: https://scholar.google.com/citations?user=xlIBwREAAAAJ&hl=en
+scholar_profile: https://scholar.google.com/citations?user=xlIBwREAAAAJ&hl=en
 location: VU Lab, Case Western Reserve University, Cleveland, USA
 layout: team-member
 show_sidebar: false

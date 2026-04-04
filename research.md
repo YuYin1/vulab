@@ -1,6 +1,6 @@
 ---
 title: Research
-subtitle: We advance state-of-the-art autonomous systems.
+subtitle: We advance state-of-the-art spatial intelligence systems.
 layout: page
 show_sidebar: false
 hero_height: is-small
