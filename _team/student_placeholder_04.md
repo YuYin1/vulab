@@ -1,7 +1,7 @@
 ---
-title: Student Placeholder 04
+title: Tuo Liang
 subtitle: PhD Student
-description: Placeholder member page for a VU Lab PhD student profile.
+description: Tuo Liang, PhD student at VU Lab.
 group: PhD Students
 order: 4
 placeholder_label: S4

@@ -1,7 +1,7 @@
 ---
-title: Student Placeholder 01
+title: Yiren Lu
 subtitle: PhD Student
-description: Placeholder member page for a VU Lab PhD student profile.
+description: Yiren Lu, PhD student at VU Lab.
 group: PhD Students
 order: 1
 placeholder_label: S1

@@ -1,7 +1,7 @@
 ---
-title: Student Placeholder 03
+title: Jerry (Jierui) Peng
 subtitle: PhD Student
-description: Placeholder member page for a VU Lab PhD student profile.
+description: Jerry (Jierui) Peng, PhD student at VU Lab.
 group: PhD Students
 order: 3
 placeholder_label: S3

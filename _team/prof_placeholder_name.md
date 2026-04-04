@@ -1,7 +1,7 @@
 ---
-title: Prof. Placeholder Name
+title: Yu Yin
 subtitle: Assistant Professor
-description: Placeholder member page for the principal investigator profile.
+description: Yu Yin, Principal Investigator of VU Lab.
 group: Principal Investigator
 order: 1
 placeholder_label: PI
