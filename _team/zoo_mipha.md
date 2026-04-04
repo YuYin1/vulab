@@ -1,17 +1,17 @@
 ---
-title: Mifa
+title: Mipha
 subtitle: Zoo
-description: Zoo member Mifa.
+description: Zoo member Mipha.
 group: Zoo
 order: 1
-image: /img/team/Mifa.jpeg
+image: /img/team/Mipha.jpeg
 expertise: Napping, demanding attention, and knocking things off tables.
 location: VU Lab
 layout: team-member
 show_sidebar: false
 ---
 
-Mifa is a valued member of the VU Lab Zoo, providing emotional support and entertainment to the research team.
+Mipha is a valued member of the VU Lab Zoo, providing emotional support and entertainment to the research team.
 
 ## Research Interests
 
@@ -21,4 +21,4 @@ Mifa is a valued member of the VU Lab Zoo, providing emotional support and enter
 
 ## Current Work
 
-Mifa is currently focused on maximizing comfort and monitoring lab activity from elevated positions.
+Mipha is currently focused on maximizing comfort and monitoring lab activity from elevated positions.

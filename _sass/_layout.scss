@@ -64,6 +64,21 @@ div.highlight {
     .subtitle {
         margin-bottom: 0.5rem;
     }
+
+    @media screen and (max-width: 768px) {
+        .card-content {
+            padding: 0.6rem 0.5rem;
+            min-height: unset;
+        }
+
+        .title.is-6 {
+            font-size: 0.75rem;
+        }
+
+        .subtitle.is-6 {
+            font-size: 0.7rem;
+        }
+    }
 }
 
 .team-member-link {
