@@ -4,6 +4,13 @@
     {% assign has_media = false %}
 {% endif %}
 
+{% assign post_href = post.external_url | default: post.url %}
+{% if post_href contains '://' %}
+    {% assign resolved_post_href = post_href %}
+{% else %}
+    {% assign resolved_post_href = post_href | relative_url %}
+{% endif %}
+
 <div class="card">
     {% if has_media %}
         <div class="card-image{% if post.video %} post-card-media{% endif %}">
@@ -21,13 +28,13 @@
         </div>
     {% else %}
         <header class="card-header">
-            <a class="card-header-title" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <a class="card-header-title" href="{{ resolved_post_href }}">{{ post.title }}</a>
         </header>
     {% endif %}
     <div class="card-content">
         <div class="content">
             {% if has_media %}
-                <a class="title is-4" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <a class="title is-4" href="{{ resolved_post_href }}">{{ post.title }}</a>
             {% endif %}
             {% if post.summary %}
                 {{ post.summary | markdownify }}
@@ -36,7 +43,7 @@
             {% endif %}
         </div>
         <div class="has-text-centered">
-            <a href="{{ site.baseurl }}{{ post.url }}" class="button is-primary"
+            <a href="{{ resolved_post_href }}" class="button is-primary"
                 >Read more <span class="is-sr-only"> about {{ post.title }}</span></a
             >
         </div>

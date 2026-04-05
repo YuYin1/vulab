@@ -232,8 +232,14 @@ hero_height: is-small
 <div id="research-grid" class="columns is-multiline">
 	{% for post in research_posts %}
 		{% assign card_id = post.title | slugify %}
+		{% assign card_href = post.external_url | default: post.url %}
+		{% if card_href contains '://' %}
+			{% assign resolved_card_href = card_href %}
+		{% else %}
+			{% assign resolved_card_href = card_href | relative_url %}
+		{% endif %}
 		<div class="column is-3-desktop is-6-tablet research-card-column" id="{{ card_id }}">
-			<a href="{{ post.url | relative_url }}" class="research-card-link">
+			<a href="{{ resolved_card_href }}" class="research-card-link">
 				<div class="card research-card">
 					<div class="card-image research-card-media{% unless post.video %} research-card-image{% endunless %}">
 						{% if post.video %}
