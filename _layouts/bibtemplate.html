@@ -67,14 +67,23 @@
     {% if entry.preprint %}
         <a href="{{ entry.preprint }}"><input type="button" class="button2" value="preprint" /></a>
     {% endif %}
+    {% if entry.pdf %}
+        <a href="{{ entry.pdf | escape }}" aria-label="pdf link for paper"><input type="button" class="button4" value="pdf" /></a>
+    {% endif %}
+    {% if entry.website %}
+        <a href="{{ entry.website | escape }}" aria-label="website link for paper"><input type="button" class="button4" value="website" /></a>
+    {% endif %}
     {% if entry.url %}
-        <a href="{{ entry.url | escape }}" aria-label="pdf link for paper"><input type="button" class="button4" value="link" /></a>
+        <a href="{{ entry.url | escape }}" aria-label="link for paper"><input type="button" class="button4" value="link" /></a>
     {% endif %}
     {% if entry.video %}
         <a href="{{ entry.video }}" aria-label="video link for paper"><input type="button" class="button5" value="video" /></a>
     {% endif %}
     {% if entry.code %}
-        <a href="{{ entry.code }}"><input type="button" class="button3" value="code" /></a>
+        <a href="{{ entry.code | escape }}" aria-label="code link for paper"><input type="button" class="button3" value="code" /></a>
+    {% endif %}
+    {% if entry.data %}
+        <a href="{{ entry.data | escape }}" aria-label="data link for paper"><input type="button" class="button3" value="data" /></a>
     {% endif %}
 </div>
 
