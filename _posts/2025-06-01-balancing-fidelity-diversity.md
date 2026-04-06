@@ -4,8 +4,6 @@ layout: research-post
 author: VU Lab
 categories: research
 tags:
-  - Synthetic Data
-  - Visual Recognition
   - Generative Models
 summary: Investigates how data fidelity and diversity affect recognition performance through synthetic data curation, offering training-free improvements for visual recognition tasks.
 image: /img/research/Synthetic.png

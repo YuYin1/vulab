@@ -36,4 +36,12 @@ For research collaborations, student opportunities, and general inquiries, pleas
 
 ## Lab Location
 
-Add the lab office address, building information, and meeting instructions here when they are available.
+**VU Lab**  
+Olin Building 606 & 704  
+Department of Computer & Data Sciences  
+Case Western Reserve University  
+Cleveland, OH, USA
+
+## Find Us
+
+[Department of Computer & Data Sciences](https://engineering.case.edu/computer-and-data-sciences) — Case Western Reserve University

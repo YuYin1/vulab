@@ -1,5 +1,5 @@
 ---
-title: VU Lab
+title: Home
 subtitle: We research <strong>Visual Understanding</strong> and <strong>Spatial Intelligence</strong>
 layout: page
 show_sidebar: false
@@ -8,8 +8,10 @@ hero_darken: true
 hero_links:
   - text: See Our Team
     link: /team/
+    icon: fas fa-users
   - text: See Our Research
     link: /research/
+    icon: fas fa-microscope
 ---
 
 <style>

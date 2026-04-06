@@ -2,13 +2,13 @@
 lang: en
 title: VU Lab
 tagline: VU Lab
-email: your-email@domain.com
+email: yu.yin@case.edu
 description: >
   The demo site for Bulma Clean Theme, made for Jekyll and GitHub pages websites
 baseurl: ""
 url: ""
 permalink: pretty
-#favicon: /path/to/favicon.png
+favicon: /img/logo/blue_logo.icon.png
 gh_sponsor: chrisrhymes
 #hide_share_buttons: true
 #theme_color: '#eeeeee'

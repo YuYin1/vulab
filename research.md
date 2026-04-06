@@ -6,7 +6,7 @@ show_sidebar: false
 hero_height: is-small
 ---
 
-{% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" %}
+{% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" | sort: 'date' | reverse %}
 
 <style>
 .research-search-panel {

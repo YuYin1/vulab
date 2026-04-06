@@ -5,22 +5,38 @@ description: Yunlai Zhou, PhD student at VU Lab.
 group: PhD Students
 order: 7
 image: /img/team/yunlaiZhou.png
-expertise: 3D scene understanding, multimodal perception, and long-horizon reasoning.
-email: student01@vulab.example
-personal_page: https://example.com
-location: VU Lab, Graduate Office
+expertise: Computer Vision, 3D Vision.
+email: yunlai.zhou@case.edu
+personal_page: https://github.com/Allen-Zhou729
+scholar_profile: https://scholar.google.com/citations?user=ytck1QsAAAAJ&hl=zh-CN
+location: VU Lab, Case Western Reserve University, Cleveland, USA
 layout: team-member
 show_sidebar: false
 ---
 
-Yunlai Zhou is a PhD student at VU Lab. This page can be updated with a full biography, publications, and links.
+Yunlai Zhou is a Ph.D. student in Computer Science at Case Western Reserve University (CWRU), advised by Prof. Yu Yin. His research focuses on Computer Vision and 3D Vision.
+
+## Education
+
+* B.S. in Software Engineering, Beijing Normal University, Zhuhai
+* M.S. in Computer Science, Case Western Reserve University
+* Visiting Student, Westlake University
 
 ## Research Interests
 
-* 3D scene understanding
-* Multimodal perception
-* Long-horizon reasoning
+* Computer Vision
+* 3D Reconstruction
+* 3D Generation
 
-## Current Work
+## Selected Publications
 
-This section can describe active projects, datasets, codebases, and paper submissions.
+
+
+## Experience
+
+* Research Intern, Westlake University, Machine Intelligence Lab
+* Research Intern, OpsiClear LLC
+
+## Academic Service
+
+* Reviewer, BSPC, EAAI

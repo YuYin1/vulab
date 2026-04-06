@@ -58,8 +58,8 @@ hero_height: is-small
 .button1,
 .button2,
 .button3,
-.button4 {
-    background-color: #003A70;
+.button4,
+.button5 {
     border: none;
     color: white;
     padding: 2px 4px;
@@ -73,20 +73,11 @@ hero_height: is-small
     border-radius: 5px;
 }
 
-.button5 {
-    background-color: #003A70;
-    border: none;
-    color: white;
-    padding: 2px 4px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 8px;
-    font-weight: bold;
-    margin: 2px 1px;
-    cursor: pointer;
-    border-radius: 5px;
-}
+.button1 { background-color: #2563EB; } /* doi */
+.button2 { background-color: #7C3AED; } /* preprint */
+.button3 { background-color: #059669; } /* cite / code */
+.button4 { background-color: #D97706; } /* link */
+.button5 { background-color: #DC2626; } /* video */
 
 @media (min-width: 48em) {
     .button0 {
@@ -107,23 +98,8 @@ hero_height: is-small
     .button1,
     .button2,
     .button3,
-    .button4 {
-        background-color: #003A70;
-        border: none;
-        color: white;
-        padding: 4px 8px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 10px;
-        font-weight: bold;
-        margin: 2px 1px;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
+    .button4,
     .button5 {
-        background-color: #003A70;
         border: none;
         color: white;
         padding: 4px 8px;

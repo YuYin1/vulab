@@ -11,14 +11,17 @@
             {% if page.hero_links %}
                 <div class="buttons my-4">
                     {% for hero_link in page.hero_links %}
-                        <a href="{{ hero_link.link | relative_url }}" class="button is-info is-large{% if hero_link.class %} {{ hero_link.class }}{% endif %}">
-                            {{- hero_link.text -}}
+                        <a href="{{ hero_link.link | relative_url }}" class="button is-rounded is-medium is-white is-outlined{% if hero_link.class %} {{ hero_link.class }}{% endif %}">
+                            {% if hero_link.icon %}
+                                <span class="icon"><i class="{{ hero_link.icon }}"></i></span>
+                            {% endif %}
+                            <span>{{- hero_link.text -}}</span>
                         </a>
                     {% endfor %}
                 </div>
             {% elsif page.hero_link %}
                 <div class="my-4">
-                    <a href="{{ page.hero_link | relative_url }}" class="button is-info is-large">
+                    <a href="{{ page.hero_link | relative_url }}" class="button is-primary is-large">
                         {{- page.hero_link_text -}}
                     </a>
                 </div>

@@ -1,6 +1,6 @@
 ---
 title: Yiran Qiao
-subtitle: Ph.D. Student from KRAKEN Lab
+subtitle: Ph.D. Student from CRAKEN Lab
 description: Long-term collaborator Yiran Qiao.
 group: Long-term Collaborators
 order: 1
@@ -13,14 +13,29 @@ layout: team-member
 show_sidebar: false
 ---
 
-Yiran Qiao is a long-term collaborator of VU Lab. This page can be updated with a full biography, publications, and links.
+### Experience
+- Research Intern
+  - Emerson China, Xi'an, Shaanxi
+  - Jun 2019 - Jun 2020
+- Research Assistant
+  - Xi'an Jiaotong University
+  - Jun 2020 - Jan 2021
 
-## Research Interests
+### Education
+- Ph.D. in Computer Science
+  - Case Western Reserve University
+  - Aug 2023 - Present
+- M.S. in Electrical and Computer Engineering
+  - The Ohio State University
+  - Jan 2021 - May 2023
+- B.S. in Electrical Engineering
+  - Xi'an Jiaotong University
+  - Aug 2015 - Jun 2019
 
-* 3D scene understanding
-* Multimodal perception
-* Long-horizon reasoning
+### Awards
+- Outstanding Graduate Teaching Award
 
-## Current Work
-
-This section can describe active projects, datasets, codebases, and paper submissions.
+### Research Interests
+- Causal Reasoning
+- Adversarial Attack and Defense
+- 3D Reconstruction and Generation

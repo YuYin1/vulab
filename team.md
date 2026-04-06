@@ -6,12 +6,14 @@ show_sidebar: false
 hero_height: is-small
 ---
 
-{% assign principal_investigators = site.team | where: "group", "Principal Investigator" | sort: "order" %}
-{% assign phd_students = site.team | where: "group", "PhD Students" | sort: "order" %}
-{% assign collaborators = site.team | where: "group", "Long-term Collaborators" | sort: "order" %}
-{% assign undergrads = site.team | where: "group", "Undergraduate Students" | sort: "order" %}
-{% assign robots = site.team | where: "group", "Robot" | sort: "order" %}
-{% assign zoo = site.team | where: "group", "Zoo" | sort: "order" %}
+{% assign principal_investigators = site.team | where: "group", "Principal Investigator" | sort: "title" %}
+{% assign phd_students = site.team | where: "group", "PhD Students" | sort: "title" %}
+{% assign collaborators = site.team | where: "group", "Long-term Collaborators" | sort: "title" %}
+{% assign undergrads = site.team | where: "group", "Undergraduate Students" | sort: "title" %}
+{% assign robots = site.team | where: "group", "Robot" | sort: "title" %}
+{% assign zoo = site.team | where: "group", "Zoo" | sort: "title" %}
+
+<p class="has-text-grey is-size-7 mb-4"><i class="fas fa-sort-alpha-down mr-1"></i>Members are listed in alphabetical order within each group.</p>
 
 ## Principal Investigator
 
