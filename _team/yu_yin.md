@@ -40,7 +40,6 @@ At VU Lab, we study **3D vision and spatial representation**, including Gaussian
 * NSF I-Corps Grant, 2022
 * PhD Network Grant, Northeastern University, USA, 2019, 2023
 
-
 ## Selected Academic Activities
 
 * **Area Chair (AC)**

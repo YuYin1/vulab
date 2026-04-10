@@ -5,15 +5,17 @@ description: Long-term collaborator Yiran Qiao.
 group: Long-term Collaborators
 order: 1
 image: /img/team/yiranQiao.jpeg
-expertise: 3D scene understanding, multimodal perception, and long-horizon reasoning.
-email: student01@vulab.example
-personal_page: https://example.com
+expertise: Causal Reasoning, Adversarial Robustness, and 3D Reconstruction & Generation.
+email: yxq350@case.edu
+personal_page: https://scholar.google.com/citations?user=XdvVFb0AAAAJ&hl=en
 location: VU Lab
 layout: team-member
 show_sidebar: false
 ---
+Yiran Qiao is a long-term collaborator of VU Lab.
 
-### Experience
+## Experience
+
 - Research Intern
   - Emerson China, Xi'an, Shaanxi
   - Jun 2019 - Jun 2020
@@ -21,7 +23,8 @@ show_sidebar: false
   - Xi'an Jiaotong University
   - Jun 2020 - Jan 2021
 
-### Education
+## Education
+
 - Ph.D. in Computer Science
   - Case Western Reserve University
   - Aug 2023 - Present
@@ -32,10 +35,12 @@ show_sidebar: false
   - Xi'an Jiaotong University
   - Aug 2015 - Jun 2019
 
-### Awards
+## Awards
+
 - Outstanding Graduate Teaching Award
 
-### Research Interests
+## Research Interests
+
 - Causal Reasoning
 - Adversarial Attack and Defense
 - 3D Reconstruction and Generation

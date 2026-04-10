@@ -10,9 +10,9 @@ We welcome research collaborations, student inquiries, and applications from peo
 
 ## Opening Positions
 
-We are always looking for self-motivated students and researchers who are interested in visual understanding, spatial intelligence, embodied intelligence, and real-world autonomy.
+**We are always looking for self-motivated students and researchers who are interested in visual understanding, spatial intelligence, embodied intelligence, and real-world autonomy.**
 
-We welcome different types of collaboration, including PhD applicants, MS research students, visiting scholars, interns, postdocs, and research staff.
+We welcome different types of collaboration, including PhD applicants, MS research students, visiting scholars, interns, and research staff.
 
 However, due to a large volume of inquiries, we may not be able to respond to every message.
 

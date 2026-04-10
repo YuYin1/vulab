@@ -4,7 +4,7 @@ subtitle: Unitree G1 Humanoid Robot
 description: VU Lab humanoid robot Case.
 group: Robot
 order: 3
-image: /img/team/Case.jpg
+image: /img/team/Case.jpeg
 layout: team-member
 show_sidebar: false
 ---

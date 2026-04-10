@@ -17,8 +17,6 @@ hero_height: is-small
 permalink: /highlights/gsmem/
 ---
 
-This placeholder project studies how embodied agents can combine vision, language, and action context to build richer scene representations in unstructured environments.
+This project studies how embodied agents can combine vision, language, and action context to build richer scene representations in unstructured environments.
 
 Current directions include long-tail object understanding, semantic grounding under ambiguity, and robust multimodal fusion for agents that must act with incomplete observations.
-
-This page is a placeholder for future project details, papers, demos, and datasets.
