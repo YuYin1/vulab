@@ -4,6 +4,7 @@ subtitle: UFactory xArm 6-DOF Robot Arm
 description: VU Lab robot arm xArm-6.
 group: Robot
 order: 4
+image: /img/team/xarm6.jpeg
 layout: team-member
 show_sidebar: false
 ---

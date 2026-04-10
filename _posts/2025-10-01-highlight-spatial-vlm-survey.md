@@ -10,6 +10,7 @@ tags:
 summary: A comprehensive survey addressing how VLMs currently lack spatial intelligence, covering recent advances, taxonomies, and evaluations toward building spatially intelligent AI.
 image: /img/research/Spatial_VLM.png
 updated: 2025-10-01
+external_url: https://dishengll.github.io/Awesome-Spatial-VLMs
 show_sidebar: false
 hero_height: is-small
 permalink: /research/spatial-vlm-survey/
