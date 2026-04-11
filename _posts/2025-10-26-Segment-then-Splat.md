@@ -1,11 +1,15 @@
 ---
 title: "Segment then Splat: Unified 3D Open-Vocabulary Segmentation via Gaussian Splatting"
+conference: "NeurIPS'25"
 layout: research-post
 author: VU Lab
 categories: research
-tags:
+tags_level1:
   - 3D Vision
+tags_level2:
   - 3D Scene Understanding
+  - 3DGS
+  - Open-Vocabulary Segmentation
 summary: We propose Segment then Splat, an Open-vocabulary 3D segmentation method that reverses the long established approach of “segmentation after reconstruction” by dividing Gaussians into distinct object sets before reconstruction. 
 image: /img/research/segment-then-splat.gif
 external_url: https://yiren-lu.com/project_pages/segment-then-splat/

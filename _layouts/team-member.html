@@ -18,8 +18,26 @@ layout: default
     {% endif %}
 {% endif %}
 {% if publication_given_name and publication_family_name %}
-    {% capture publication_count_raw %}{% bibliography_count --query @*[author ~= {{ publication_family_name }} && author ~= {{ publication_given_name }}] %}{% endcapture %}
-    {% assign publication_count = publication_count_raw | strip | plus: 0 %}
+    {% assign selected_publication_keys = page.citation_keys | default: page.paper_names | default: '' %}
+    {% assign selected_publication_keys_count = selected_publication_keys | size %}
+    {% assign show_publications = true %}
+    {% assign should_show_publications = false %}
+    {% if page.show_publications == false %}
+        {% assign show_publications = false %}
+    {% endif %}
+    {% if show_publications != false or selected_publication_keys_count > 0 %}
+        {% assign should_show_publications = true %}
+    {% endif %}
+    {% assign publication_query = page.publication_query | default: page.publications_query %}
+    {% if selected_publication_keys_count > 0 %}
+        {% assign publication_count = selected_publication_keys_count %}
+    {% elsif publication_query %}
+        {% capture publication_count_raw %}{% bibliography_count --query {{ publication_query }} %}{% endcapture %}
+        {% assign publication_count = publication_count_raw | strip | plus: 0 %}
+    {% elsif show_publications %}
+        {% capture publication_count_raw %}{% bibliography_count --query @*[author ~= {{ publication_family_name }} && author ~= {{ publication_given_name }}] %}{% endcapture %}
+        {% assign publication_count = publication_count_raw | strip | plus: 0 %}
+    {% endif %}
 {% endif %}
 
 <style>
@@ -158,11 +176,22 @@ layout: default
             {{ content }}
         </div>
 
-        {% if publication_given_name and publication_family_name %}
+        {% if publication_given_name and publication_family_name and should_show_publications %}
             <div class="content team-publications">
-                <h2>Publications</h2>
+                {% if selected_publication_keys_count > 0 %}
+                    <h2>Selected Publications</h2>
+                {% else %}
+                    <h2>Publications</h2>
+                {% endif %}
                 {% if publication_count == 0 %}
                     <p>No publications listed yet.</p>
+                {% elsif selected_publication_keys_count > 0 %}
+                    {% for citation_key in selected_publication_keys %}
+                        {% nocite citation_key %}
+                    {% endfor %}
+                    {% bibliography --cited_in_order %}
+                {% elsif publication_query %}
+                    {% bibliography --query {{ publication_query }} %}
                 {% else %}
                     {% bibliography --query @*[author ~= {{ publication_family_name }} && author ~= {{ publication_given_name }}] %}
                 {% endif %}

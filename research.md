@@ -127,6 +127,9 @@ hero_height: is-small
 }
 
 .research-tag-chip {
+	background-color: color-mix(in srgb, var(--filter-accent, #40e0d0) 10%, white 90%);
+	border-color: var(--filter-accent, #40e0d0);
+	color: #0f172a;
 	cursor: pointer;
 	transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
@@ -139,8 +142,18 @@ hero_height: is-small
 }
 
 .research-tag-chip.is-selected-filter {
-	box-shadow: 0 0 0 2px rgba(58, 99, 140, 0.28);
+	box-shadow: 0 0 0 2px var(--filter-accent, #3a638c);
 	transform: translateY(-1px);
+}
+
+.research-keyword-chip {
+	background: #f3f4f6;
+	border: 1px solid rgba(31, 41, 51, 0.12);
+	color: #1f2933;
+}
+
+.research-tags-level2 {
+	margin-top: 0.35rem;
 }
 
 .research-card-link {
@@ -156,6 +169,12 @@ hero_height: is-small
 .research-card {
 	height: 100%;
 	transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.research-conference-prefix {
+	color: #2E333D;
+	font-style: italic;
+	margin-right: 0.3rem;
 }
 
 
@@ -233,6 +252,14 @@ hero_height: is-small
 	{% for post in research_posts %}
 		{% assign card_id = post.title | slugify %}
 		{% assign card_href = post.external_url | default: post.url %}
+		{% assign filter_tags = post.tags_level1 | default: post.tags %}
+		{% assign keyword_tags = '' | split: '' %}
+		{% if filter_tags %}
+			{% assign keyword_tags = keyword_tags | concat: filter_tags %}
+		{% endif %}
+		{% if post.tags_level2 %}
+			{% assign keyword_tags = keyword_tags | concat: post.tags_level2 %}
+		{% endif %}
 		{% if card_href contains '://' %}
 			{% assign resolved_card_href = card_href %}
 		{% else %}
@@ -257,13 +284,20 @@ hero_height: is-small
 						{% endif %}
 					</div>
 					<div class="card-content">
-						<p class="title is-5">{{ post.title }}</p>
+						<p class="title is-5">{% if post.conference %}[<span class="research-conference-prefix">{{ post.conference }}</span>] {% endif %}{{ post.title }}</p>
 						<div class="content">{{ post.summary }}</div>
-						<div class="tags">
-							{% for tag in post.tags %}
-								<span class="tag is-info is-light research-tag-chip" data-tag="{{ tag }}" role="button" tabindex="0">{{ tag }}</span>
+						<div class="tags research-tags-level1">
+							{% for tag in filter_tags %}
+								<span class="tag is-info is-light research-tag-chip research-tag-level1" data-tag="{{ tag }}" role="button" tabindex="0">{{ tag }}</span>
 							{% endfor %}
 						</div>
+						{% if post.tags_level2 and post.tags_level2 != empty %}
+							<div class="tags research-tags-level2">
+								{% for tag in post.tags_level2 %}
+									<span class="tag is-light research-keyword-chip research-tag-level2" data-tag="{{ tag }}">{{ tag }}</span>
+								{% endfor %}
+							</div>
+						{% endif %}
 					</div>
 				</div>
 			</a>
@@ -288,28 +322,36 @@ document.addEventListener('DOMContentLoaded', function() {
 	}
 
 	var filterPalette = [
-		'#40E0D0',
+		'#F59E0B',
+		'#00A2FF',
+		'#61D836',
+		'#929292',
+		'#b7b7fc',
+		'#F97316',
+		'#00eaff',
 		'#DFFF00',
-		'#FF3333',
-		'#33FF4C',
 		'#F633FF',
-		'#CCCCFF',
-		'#FFA533',
-		'#33FFB2'
+		'#33FFB2',
+		'#F8BA00',
 	];
 
-	var selectedTags = new Set();
+	var selectedTag = null;
 	var cards = Array.from(grid.querySelectorAll('.research-card-column')).map(function(column, index) {
-		var tags = Array.from(column.querySelectorAll('.research-tag-chip')).map(function(tagElement) {
+		var filterTags = Array.from(column.querySelectorAll('.research-tag-level1')).map(function(tagElement) {
 			return tagElement.textContent.trim();
 		}).filter(Boolean);
 
-		column.dataset.tags = tags.join('|');
+		var keywordTags = Array.from(column.querySelectorAll('.research-tag-level1, .research-tag-level2')).map(function(tagElement) {
+			return tagElement.textContent.trim();
+		}).filter(Boolean);
+
+		column.dataset.filterTags = filterTags.join('|');
+		column.dataset.keywordTags = keywordTags.join('|');
 		column.dataset.cardIndex = String(index);
 		column.dataset.cardTitle = (column.querySelector('.title') || {}).textContent ? column.querySelector('.title').textContent.trim().toLowerCase() : '';
 		column.dataset.cardSummary = (column.querySelector('.content') || {}).textContent ? column.querySelector('.content').textContent.trim().toLowerCase() : '';
 
-		Array.from(column.querySelectorAll('.research-tag-chip')).forEach(function(tagElement) {
+		Array.from(column.querySelectorAll('.research-tag-level1')).forEach(function(tagElement) {
 			tagElement.addEventListener('click', function(event) {
 				event.preventDefault();
 				event.stopPropagation();
@@ -325,12 +367,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		return {
 			element: column,
-			tags: tags
+			filterTags: filterTags,
+			keywordTags: keywordTags
 		};
 	});
 
 	var allTags = Array.from(new Set(cards.flatMap(function(card) {
-		return card.tags;
+		return card.filterTags;
 	}))).sort();
 
 	var buttons = new Map();
@@ -343,7 +386,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		button.style.setProperty('--filter-accent', color);
 		button.addEventListener('click', function() {
 			if (isAllButton) {
-				selectedTags.clear();
+				selectedTag = null;
 			} else {
 				toggleTag(label);
 				return;
@@ -359,7 +402,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	allTags.forEach(function(tag, index) {
 		var color = filterPalette[index % filterPalette.length];
 		buttons.set(tag, createButton(tag, color, false));
-		Array.from(grid.querySelectorAll('.tags .tag')).forEach(function(tagElement) {
+		Array.from(grid.querySelectorAll('.research-tag-level1')).forEach(function(tagElement) {
 			if (tagElement.textContent.trim() === tag) {
 				tagElement.style.setProperty('--filter-accent', color);
 			}
@@ -367,11 +410,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 
 	function toggleTag(tag) {
-		if (selectedTags.has(tag)) {
-			selectedTags.delete(tag);
-		} else {
-			selectedTags.add(tag);
-		}
+		selectedTag = selectedTag === tag ? null : tag;
 		updateFilters();
 	}
 
@@ -383,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		return card.element.dataset.cardTitle.includes(query) ||
 			card.element.dataset.cardSummary.includes(query) ||
-			card.tags.some(function(tag) {
+			card.keywordTags.some(function(tag) {
 				return tag.toLowerCase().includes(query);
 			});
 	}
@@ -392,9 +431,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		var visibleCount = 0;
 
 		cards.forEach(function(card) {
-			var matchesTags = selectedTags.size === 0 || card.tags.some(function(tag) {
-				return selectedTags.has(tag);
-			});
+			var matchesTags = !selectedTag || card.filterTags.indexOf(selectedTag) !== -1;
 			var shouldShow = matchesTags && matchesSearch(card);
 			card.element.style.display = shouldShow ? '' : 'none';
 			if (shouldShow) {
@@ -402,14 +439,14 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 		});
 
-		allButton.classList.toggle('is-active', selectedTags.size === 0);
+		allButton.classList.toggle('is-active', !selectedTag);
 
 		buttons.forEach(function(button, tag) {
-			button.classList.toggle('is-active', selectedTags.has(tag));
+			button.classList.toggle('is-active', selectedTag === tag);
 		});
 
-		Array.from(grid.querySelectorAll('.research-tag-chip')).forEach(function(tagElement) {
-			tagElement.classList.toggle('is-selected-filter', selectedTags.has(tagElement.textContent.trim()));
+		Array.from(grid.querySelectorAll('.research-tag-level1')).forEach(function(tagElement) {
+			tagElement.classList.toggle('is-selected-filter', selectedTag === tagElement.textContent.trim());
 		});
 
 		emptyState.style.display = visibleCount === 0 ? 'block' : 'none';

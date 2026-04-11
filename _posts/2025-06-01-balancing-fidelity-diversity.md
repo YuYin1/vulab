@@ -3,10 +3,13 @@ title: "Balancing Fidelity and Diversity: Synthetic Data Could Stand on the Shou
 layout: research-post
 author: VU Lab
 categories: research
-tags:
+tags_level1:
   - Generative Models
+tags_level2:
+  - Synthetic Data
+  - Data Curation
 summary: Investigates how data fidelity and diversity affect recognition performance through synthetic data curation, offering training-free improvements for visual recognition tasks.
-image: /img/research/Synthetic.png
+image: /img/research/Synthetic.jpg
 show_sidebar: false
 hero_height: is-small
 permalink: /research/balancing-fidelity-diversity/

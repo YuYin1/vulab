@@ -4,10 +4,23 @@ layout: null
 [
 {% assign research_posts = site.posts | where_exp: "post", "post.categories contains 'research'" %}
 {% for post in research_posts %}
+  {% assign search_tags = '' | split: '' %}
+  {% assign search_title = post.title %}
+  {% if post.conference %}
+    {% assign search_title = '[' | append: post.conference | append: '] ' | append: post.title %}
+  {% endif %}
+  {% if post.tags_level1 %}
+    {% assign search_tags = search_tags | concat: post.tags_level1 %}
+  {% elsif post.tags %}
+    {% assign search_tags = search_tags | concat: post.tags %}
+  {% endif %}
+  {% if post.tags_level2 %}
+    {% assign search_tags = search_tags | concat: post.tags_level2 %}
+  {% endif %}
   {
-    "title": {{ post.title | jsonify }},
+    "title": {{ search_title | jsonify }},
     "url": {{ post.url | relative_url | jsonify }},
-    "tags": {{ post.tags | join: ', ' | jsonify }},
+    "tags": {{ search_tags | uniq | join: ', ' | jsonify }},
     "summary": {{ post.summary | default: post.excerpt | strip_html | strip_newlines | jsonify }}
   }{% unless forloop.last %},{% endunless %}
 {% endfor %}

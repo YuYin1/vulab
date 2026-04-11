@@ -3,9 +3,13 @@ title: "View-consistent Object Removal in Radiance Fields"
 layout: research-post
 author: VU Lab
 categories: research
-tags:
+tags_level1:
   - 3D Vision
+tags_level2:
   - 3D Editing
+  - NeRF
+  - Object Removal
+  - Multi-view Consistency
 summary: we introduce a novel RF editing pipeline that significantly enhances consistency by requiring the inpainting of only a single reference image. This image is then propagated across multiple views using a depth-based approach, to maintain consistencies.
 image: /img/research/view-consistent-object-removal.gif
 external_url: https://yiren-lu.com/project_pages/View-consistent_Object_Removal_in_Radiance_Fields/

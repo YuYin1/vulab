@@ -3,12 +3,14 @@ title: "Spatial Intelligence in Vision-Language Models: A Comprehensive Survey"
 layout: research-post
 author: VU Lab
 categories: research
-tags:
-  - Vision-Language Models
-  - Spatial Intelligence
+tags_level1:
+  - VLM Reasoning
   - Survey
+tags_level2:
+  - Spatial Intelligence
 summary: A comprehensive survey addressing how VLMs currently lack spatial intelligence, covering recent advances, taxonomies, and evaluations toward building spatially intelligent AI.
-image: /img/research/Spatial_VLM.png
+image: /img/research/Spatial_VLM.jpg
+video: /img/highlights/spatial_survey.mov
 show_sidebar: false
 hero_height: is-small
 external_url: https://dishengll.github.io/Awesome-Spatial-VLMs/

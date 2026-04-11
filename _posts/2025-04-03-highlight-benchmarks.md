@@ -10,7 +10,6 @@ tags:
 summary: Our lab offers a diverse range of benchmarks, including YesBut, Nebular, Viva, and Causal 3D, focused on advancing open-world visual understanding and robotic interaction. 
 image: /img/highlights/visual_understanding_benchmark.jpg
 video: /img/highlights/visual_understanding_benchmark.mov
-video_poster: /img/highlights/visual_understanding_benchmark.jpg
 updated: 2025-04-03
 show_sidebar: false
 hero_height: is-small

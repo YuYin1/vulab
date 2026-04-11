@@ -125,14 +125,22 @@ hero_height: is-small
 }
 </style>
 
+# Preprints
+
+{% bibliography --query @*[status=preprint] %}
+
 # 2026
-{% bibliography --query @*[year=2026] %}
+
+{% bibliography --query @*[year=2026 && status=accepted] %}
 
 # 2025
-{% bibliography --query @*[year=2025] %}
+
+{% bibliography --query @*[year=2025 && status=accepted] %}
 
 # 2024
-{% bibliography --query @*[year=2024] %}
+
+{% bibliography --query @*[year=2024 && status=accepted] %}
 
 # 2023
-{% bibliography --query @*[year=2023] %}
+
+{% bibliography --query @*[year=2023 && status=accepted] %}

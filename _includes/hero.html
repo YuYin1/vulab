@@ -6,7 +6,11 @@
 >
     <div class="hero-body {% if page.hero_darken %} hero-darken {% endif %}">
         <div class="container">
-            <h1 class="title is-2">{{ page.title }}</h1>
+            {% assign display_page_title = page.title %}
+            {% if page.conference %}
+                {% assign display_page_title = '[' | append: page.conference | append: '] ' | append: page.title %}
+            {% endif %}
+            <h1 class="title is-2">{{ display_page_title }}</h1>
             <p class="subtitle is-3">{{ page.subtitle }}</p>
             {% if page.hero_links %}
                 <div class="buttons my-4">

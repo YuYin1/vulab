@@ -11,6 +11,12 @@ email: yu.yin@case.edu
 personal_page: https://yin-yu.github.io/
 scholar_profile: https://scholar.google.com/citations?hl=en&user=pY0_YNcAAAAJ&view_op=list_works&sortby=pubdates
 location: Olin 606, CWRU
+show_publications: false
+citation_keys:
+  - lu2025segment
+  - lu2025bard
+  - hu2025praxis
+  - hu2024cracking
 ---
 
 I am a tenure-track Assistant Professor in the Department of Computer & Data Science at Case Western Reserve University, where I lead the **VU Lab**. My research focuses on <u><i>computer vision and 3D vision</i></u>, <u><i>multimodal large language models (MLLMs)</i></u>, and <u><i>embodied AI systems</i></u>, with the goal of building **spatially grounded AI systems** that can perceive, reason, and act in complex real-world environments.

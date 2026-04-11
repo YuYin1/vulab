@@ -8,15 +8,24 @@ tags:
   - Spatial Intelligence
   - Survey
 summary: A comprehensive survey addressing how VLMs currently lack spatial intelligence, covering recent advances, taxonomies, and evaluations toward building spatially intelligent AI.
-image: /img/research/Spatial_VLM.png
+image: /img/research/Spatial_VLM.jpg
+video: /img/highlights/spatial_survey.mov
 updated: 2025-10-01
 show_sidebar: false
 hero_height: is-small
 permalink: /research/spatial-vlm-survey/
 ---
 
-This placeholder project studies how embodied agents can combine vision, language, and action context to build richer scene representations in unstructured environments.
+## Abstract
 
-Current directions include long-tail object understanding, semantic grounding under ambiguity, and robust multimodal fusion for agents that must act with incomplete observations.
+Vision-Language Models (VLMs) have achieved remarkable progress in language-grounded visual understanding, yet a critical gap remains: spatial intelligence. This survey provides a comprehensive overview of recent advances, taxonomies, and evaluations toward building spatially intelligent AI systems.
 
-This page is a placeholder for future project details, papers, demos, and datasets.
+## Authors
+
+Disheng Liu, Tuo Liang, Zhe Hu, Jierui Peng, Yiren Lu, Yi Xu, Yun Fu, Yu Yin
+
+## Links
+
+- [Paper (TechRxiv)](https://www.techrxiv.org/users/992599/articles/1354538/master/file/data/Spatial_VLM_Survey_Techrxiv/Spatial_VLM_Survey_Techrxiv.pdf)
+- [Project Website](https://vulab-ai.github.io/Awesome-Spatial-VLMs/)
+- [GitHub](https://github.com/vulab-AI/Awesome-Spatial-VLMs)
