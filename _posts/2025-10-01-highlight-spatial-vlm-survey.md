@@ -11,6 +11,7 @@ summary: A comprehensive survey addressing how VLMs currently lack spatial intel
 image: /img/research/Spatial_VLM.jpg
 video: /img/highlights/spatial_survey.mov
 updated: 2025-10-01
+external_url: https://dishengll.github.io/Awesome-Spatial-VLMs
 show_sidebar: false
 hero_height: is-small
 permalink: /research/spatial-vlm-survey/

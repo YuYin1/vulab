@@ -12,7 +12,7 @@ location: VU Lab
 layout: team-member
 show_sidebar: false
 ---
-Yiran Qiao is a long-term collaborator of VU Lab.
+Yiran Qiao is a long-term collaborator of the VU Lab. He is currently a Ph.D. student in the Department of Computer and Data Sciences at Case Western Reserve University, where he is also a member of the CRAKEN Lab, advised by Prof. Jing Ma.
 
 ## Experience
 
