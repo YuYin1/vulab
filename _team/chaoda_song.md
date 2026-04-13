@@ -3,22 +3,33 @@ title: Chaoda Song
 subtitle: PhD Student
 description: Chaoda Song, PhD student at VU Lab.
 group: PhD Students
-order: 5
+order: 1
 image: /img/team/chaodaSong.jpeg
-expertise: Neuro-symbolic reasoning, planning, and embodied autonomy.
-email: student05@vulab.example
-personal_page: https://example.com/student-placeholder-05
-location: VU Lab, Graduate Office
+expertise: Vision-Language-Action (VLA), Vision-Language Models (VLM), Large Language Models (LLM)
+email: cxs965@case.edu
+scholar_profile: https://scholar.google.com/citations?user=TQoMIhAAAAAJ&hl=en&oi=ao
+location: VU Lab, Case Western Reserve University, Cleveland, USA
+layout: team-member
+show_sidebar: false
 ---
 
-Student Placeholder 05 is a placeholder PhD student profile page modeled after the AirLab member-page setup. It can later be replaced with a real student biography, publications, and links.
+I am a PhD candidate in Computer Science and Data Science at Case Western Reserve University, advised by Prof. Yu Yin. My research focuses on the intersection of computer vision and large language models, with current work on VLA-driven robotic manipulation on real hardware. Outside of research, I enjoy tennis, music, and K-pop and hip-hop dance. I am always happy to connect, exchange ideas, and discuss new directions—feel free to reach out.
+
+## Education
+
+* B.S. in Software Engineering, Zhengzhou University, China
+* Ph.D. in Computer Science, Case Western Reserve University, USA
 
 ## Research Interests
 
-* Neuro-symbolic reasoning
-* Planning
-* Embodied autonomy
+* Computer Vision
+* Large Language Models (LLM)
+* Vision-Language-Action (VLA) models
 
-## Current Work
 
-This placeholder section can describe the student's active projects, datasets, codebases, and paper submissions.
+## Academic Service
+
+* Reviewer, ICML 2026
+* Reviewer, ECCV 2026
+* Reviewer, CoLM 2026
+* Reviewer, ICME 2026
