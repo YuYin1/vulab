@@ -1,12 +1,11 @@
 ---
-title: Jerry (Jierui) Peng
+title: Jierui Peng
 subtitle: PhD Student
 description: Jierui Peng, PhD student at VU Lab.
 group: PhD Students
 order: 3
 image: /img/team/JerryPeng.JPG
 expertise: Computer Vision, Robotics AI, Online Learning.
-publication_author: Peng, Jierui
 email: jierui.peng@case.edu
 personal_page: https://jerrypeng.com/
 scholar_profile: https://scholar.google.com/citations?user=7CLFLX0AAAAJ&hl=en

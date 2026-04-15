@@ -3,7 +3,7 @@ title: Yanyan Zhang
 subtitle: PhD Student
 description: Yanyan Zhang, PhD student at VU Lab.
 group: PhD Students
-order: 6
+order: 5
 image: /img/team/yanyanZhang.jpg
 expertise: Computer Vision, Embodied AI, and Visual Reasoning.
 email: student06@vulab.example

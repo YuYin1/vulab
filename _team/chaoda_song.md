@@ -3,7 +3,7 @@ title: Chaoda Song
 subtitle: PhD Student
 description: Chaoda Song, PhD student at VU Lab.
 group: PhD Students
-order: 1
+order: 4
 image: /img/team/chaodaSong.jpeg
 expertise: Vision-Language-Action (VLA), Vision-Language Models (VLM), Large Language Models (LLM)
 email: cxs965@case.edu
