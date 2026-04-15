@@ -11,7 +11,7 @@ summary: A comprehensive survey addressing how VLMs currently lack spatial intel
 image: /img/research/Spatial_VLM.jpg
 video: /img/highlights/spatial_survey.mp4
 updated: 2025-10-01
-external_url: /project_pages/awesome-spatial-vlms/
+external_url: /projects/awesome-spatial-vlms/
 show_sidebar: false
 hero_height: is-small
 permalink: /research/spatial-vlm-survey/
@@ -28,5 +28,5 @@ Disheng Liu, Tuo Liang, Zhe Hu, Jierui Peng, Yiren Lu, Yi Xu, Yun Fu, Yu Yin
 ## Links
 
 - [Paper (TechRxiv)](https://www.techrxiv.org/users/992599/articles/1354538/master/file/data/Spatial_VLM_Survey_Techrxiv/Spatial_VLM_Survey_Techrxiv.pdf)
-- [Project Website](/project_pages/awesome-spatial-vlms/)
+- [Project Website](/projects/awesome-spatial-vlms/)
 - [GitHub](https://github.com/vulab-AI/Awesome-Spatial-VLMs)

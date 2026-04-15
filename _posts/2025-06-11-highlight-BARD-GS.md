@@ -7,7 +7,7 @@ tags:
   - 3D Vision
 summary: BARD-GS is a novel approach for robust dynamic scene reconstruction that effectively handles blurry inputs and imprecise camera poses.
 image: /img/research/bard-gs.gif
-external_url: /project_pages/bard-gs/
+external_url: /projects/bard-gs/
 updated: 2025-06-11
 show_sidebar: false
 hero_height: is-small

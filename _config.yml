@@ -41,9 +41,9 @@ exclude:
   - clean-theme.gemspec
   - Gemfile.lock
   - node_modules
-  - project_pages/**/*.md
-  - project_pages/**/*.markdown
-  - project_pages/Awesome-Spatial-VLMs/index.md
+  - projects/**/*.md
+  - projects/**/*.markdown
+  - projects/awesome-spatial-vlms/index.md
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
