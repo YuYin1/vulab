@@ -13,7 +13,7 @@ hero_height: is-small
 {% assign robots = site.team | where: "group", "Robot" | sort: "order" %}
 {% assign zoo = site.team | where: "group", "Zoo" | sort: "order" %}
 
-<p class="has-text-grey is-size-7 mb-4"><i class="fas fa-sort-numeric-down mr-1"></i>Members are listed by the explicit order set in each team profile.</p>
+<!-- <p class="has-text-grey is-size-7 mb-4"><i class="fas fa-sort-numeric-down mr-1"></i>Members are listed by the explicit order set in each team profile.</p> -->
 
 ## Principal Investigator
 

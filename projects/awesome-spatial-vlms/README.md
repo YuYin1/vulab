@@ -3,6 +3,11 @@
   <a href="https://github.com/sindresorhus/awesome"><img src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" alt="Awesome Badge" style="vertical-align: middle;"> </a> <a href="https://github.com/DishengLL/Awesome-Spatial-VLMs/commits/main/"> <img src="https://img.shields.io/github/last-commit/DishengLL/Awesome-Spatial-VLMs" alt="GitHub Last Commit" style="vertical-align: middle;"></a>
 </div>
 
+<p align="center">
+  <video src="https://github.com/DishengLL/Awesome-Spatial-VLMs/raw/main/spatial_survey.mov" width="88%" controls autoplay muted loop>
+    Your browser does not support the video tag.
+  </video>
+</p>
 
 <!-- <h1 align="center" style="font-size: 1.7rem">
   🚀 Awesome Spatial VLMs
