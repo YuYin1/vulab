@@ -12,7 +12,7 @@ tags_level2:
   - Multi-view Consistency
 summary: we introduce a novel RF editing pipeline that significantly enhances consistency by requiring the inpainting of only a single reference image. This image is then propagated across multiple views using a depth-based approach, to maintain consistencies.
 image: /img/research/view-consistent-object-removal.gif
-external_url: https://yiren-lu.com/project_pages/View-consistent_Object_Removal_in_Radiance_Fields/
+external_url: /project_pages/view-consistent-object-removal-in-radiance-fields/
 show_sidebar: false
 hero_height: is-small
 permalink: /research/view-consistent-obj-removal/

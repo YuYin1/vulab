@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="BARD-GS: Blur-Aware Reconstruction of Dynamic Scenes via Gaussian Splatting.">
+    <meta name="keywords" content="3D Gaussian Splatting, 4D Gaussian Splatting, Deblur, Blur-Aware Reconstruction, Dynamic Reconstruction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BARD-GS: Blur-Aware Reconstruction of Dynamic Scenes via Gaussian Splatting</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="./static/images/bard_logo.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="./static/images/bard_logo.png" width="42">BARD-GS: <font color="#f03a17">B</font>lur-<font color="#f03a17">A</font>ware <font color="#f03a17">R</font>econstruction of <font color="#f03a17">D</font>ynamic Scenes via Gaussian Splatting</h1>            <div class="is-size-5 publication-authors">
+              <h1 class="title is-3 publication-title">CVPR 2025</h1>
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://yiren-lu.com/" target="_blank">Yiren Lu</a>,</span>
+              <span class="author-block">
+                <a href="https://github.com/Allen-Zhou729" target="_blank">Yunlai Zhou</a>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=xlIBwREAAAAJ&hl=en" target="_blank">Disheng Liu</a>,</span>
+              <span class="author-block">
+                <a href="https://tuo-liang.github.io/" target="_blank">Tuo Liang</a>,</span>
+              <span class="author-block">
+                <a href="https://yin-yu.github.io/" target="_blank">Yu Yin</a>
+              </span>
+              </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Case Western Reserve University</span>
+                    <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/2503.15835" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2503.15835" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/luyr/BARD-GS" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1fbpBsX9kwQER2IhHzAPKZHHB2hZ5TfZ0?usp=sharing" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- demo video image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="videos-container" style="display: flex; justify-content: center; gap: 20px;">
+        <div style="text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/sriracha_blur.mp4" type="video/mp4">
+          </video>
+          <p><strong>Input Blurry Video</strong></p>
+        </div>
+        <div style="text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/sriracha_stage1.mp4" type="video/mp4">
+          </video>
+          <p><strong>First Stage</strong></p>
+        </div>
+        <div style="text-align: center;">
+          <video autoplay muted loop playsinline style="width: 100%; max-width: 300px;">
+            <source src="./static/videos/sriracha_ours_12.mp4" type="video/mp4">
+          </video>
+          <p><strong>Second Stage</strong></p>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        Given a set of severe motion blurred images with moving objects, <b><font color="#f03a17">BARD-GS</font></b> first models the <b><font color="#209cee">camera motion</font></b> during exposure time with learnable camerea poses to restore the sharp static regions. Then in the second stage, <b><font color="#209cee">object motion</font></b> modeled by trajectory of Gaussians, to achieve deblurring in dynamic regions.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Abstract</h2>
+      </div>
+      <!-- <div class="item">
+        <img src="static/images/teaser.png" alt="MY ALT TEXT"/>
+      </div> -->
+      <div class="content has-text-justified">
+        <p>
+          3D Gaussian Splatting (3DGS) has shown remarkable potential for static scene reconstruction, and recent advancements have extended its application to dynamic scenes. However, the quality of reconstructions depends heavily on high-quality input images and precise camera poses, which is not that trivial to fulfill in the real-world scenarios. Capturing dynamic scenes with handheld monocular cameras, for instance, typically involves simultaneous movement of both the camera and objects within a single exposure. This combined motion frequently results in image blur that existing methods cannot adequately handle. To address these challenges, we introduce BARD-GS, a novel approach for robust dynamic scene reconstruction that effectively handles blurry inputs and imprecise camera poses. <b><font color="#f03a17">BARD-GS</font> comprises two main components: 1) <font color="#209cee">camera motion deblurring</font> and 2) <font color="#209cee">object motion deblurring</font></b>. By explicitly decomposing motion blur into camera motion blur and object motion blur and modeling them separately, we achieve significantly improved rendering results in dynamic regions. In addition, we collect a real-world motion blur dataset of dynamic scenes to evaluate our approach. Extensive experiments demonstrate that BARD-GS effectively reconstructs high-quality dynamic scenes under realistic conditions, significantly outperforming existing methods.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Motion Blur formation -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Motion Blur Formation</h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/blur_formation.png" alt="MY ALT TEXT" style="width: 70%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          <b>The formation process of motion blur.</b> It originates from two sources: camera-induced blur caused by camera movements during exposure, and object-induced blur resulting from fast objects moving. The static regions of a scene are affected solely by camera motion blur, while dynamic regions are impacted by both camera and object motion blur.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- End motion blur formation -->
+
+<!-- pipeline overview -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Pipeline</h2>
+      </div>
+      <div class="item">
+        <img src="static/images/Pipeline.png" alt="MY ALT TEXT"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          An overview of the pipeline. Our method consists of two stages: camera motion deblur and object motion deblur. In the first stage, we handle camera motion blur by modeling the camera's trajectory during each exposure, resulting in sharp reconstruction in the static regions. Then, we utilized the optimized camera poses together with the depth map obtain from DepthAnything to initialize the dynamic Gaussians. In the second stage, we address object motion blur by modeling the trajectory of 3D Gaussians within each exposure using deformation field, which allow us to achieve clear reconstruction in the dynamic regions.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- End pipeline overview -->
+
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results on Deblurring</h2>
+      </div>
+      <div class="content has-text-justified">
+        <p class="content">Here we demonstrate the performance of BARD-GS in the deblurring task compared to baseline methods. Since Deformable 3D Gaussian (D3DGS) and 4DGS are not inherently designed to handle motion blur, we apply a per-frame image deblurring method, MPRNet, as preprocessing for these methods. As illustrated, BARD-GS achieves notably superior results in <b><font color="#f03a17">dynamic regions</font></b>, such as the <b><font color="#209cee">cat's face</font></b> and the <b><font color="#209cee">spinning paper windmill</font></b>. </p>
+      </div>
+      <div class="columns is-centered">
+        <div class="column content has-text-centered">
+            <h2 class="title is-6">D3DGS + MPRNet</h2>
+            <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+            <source src="./static/videos/sriracha_D3DGS+MPR.mp4" type="video/mp4">
+            </video>
+            <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+            <source src="./static/videos/paperwindmill_D3DGS+MPR.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">4DGS+MPRNet</h2>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/sriracha_4dgs+mpr.mp4" type="video/mp4">
+          </video>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/paperwindmill_4dgs+mpr.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">DyBluRF</h2>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/sriracha_dyblurf.mp4" type="video/mp4">
+          </video>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/paperwindmill_dyblurf.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content has-text-centered">
+                <h2 class="title is-6">BARD-GS (Ours)</h2>
+                <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+                <source src="./static/videos/sriracha_ours.mp4" type="video/mp4">
+                </video>
+                <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+                <source src="./static/videos/paper_windmill_ours.mp4" type="video/mp4">
+                </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Results on Novel View Synthesis</h2>
+      </div>
+      <div class="content has-text-justified">
+        <p class="content">In this section, we evaluate the performance of BARD-GS on the novel view synthesis task using our proposed <b>real-world blurry dataset</b>. Due to the significantly more severe motion blur present in our dataset compared to synthesized datasets, image deblurring methods such as MPRNet may struggle or fail, leading to poor reconstruction quality in both static and dynamic regions.</p>
+      </div>
+      <div class="columns is-centered">
+        <div class="column content has-text-centered">
+            <h2 class="title is-6">D3DGS + MPRNet</h2>
+            <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+            <source src="./static/videos/windmill_D3DGS+MPR.mp4" type="video/mp4">
+            </video>
+            <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+            <source src="./static/videos/card_D3DGS+MPR.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">4DGS + MPRNet</h2>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/windmill_4dgs+mpr.mp4" type="video/mp4">
+          </video>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/card_4dgs+mpr.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column content has-text-centered">
+          <h2 class="title is-6">DyBluRF</h2>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/windmill_dyblurf.mp4" type="video/mp4">
+          </video>
+          <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+          <source src="./static/videos/card_dyblurf.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="column">
+          <div class="columns is-centered">
+            <div class="column content has-text-centered">
+                <h2 class="title is-6">BARD-GS (Ours)</h2>
+                <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+                <source src="./static/videos/windmill_ours.mp4" type="video/mp4">
+                </video>
+                <video autoplay="" muted="" loop="" playsinline="" height="100%" class="other-video">
+                <source src="./static/videos/card_ours.mp4" type="video/mp4">
+                </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="hero is-light">
+  <div class="hero-body">
+      <div class="container has-text-centered">
+          <h2 class="title">Real-world Blurry Dataset</h2>
+          <div class="content has-text-justified">
+            <p class="content">In the absence of existing dynamic scene datasets with motion blur, we collect a real-world dataset to address this gap. Different from synthetic datasets used in previous works, where blurry images are generated by averaging consecutive frames, our dataset captures motion blur that closely aligns with real-world scenarios. We  provide paired blurry and sharp images captured from diverse environments.</p>
+            <p class="content"><b>The first row shows blurry videos and the second row is their corresponding sharp videos.</b></p>
+          </div>
+          <div id="results-carousel" class="carousel results-carousel">
+              <div class="item rounded-0 border-0 item-1">
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/shark-spin_blur.mp4" type="video/mp4">
+                  </video>
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/shark-spin_sharp.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="item rounded-0 border-0 item-2">
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/kitchen_blur.mp4" type="video/mp4">
+                  </video>
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/kitchen_sharp.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="item rounded-0 border-0 item-3">
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/walk_blur.mp4" type="video/mp4">
+                  </video>
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/walk_sharp.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="item rounded-0 border-0 item-4">
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/tennis-ball_blur.mp4" type="video/mp4">
+                  </video>
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/tennis-ball_sharp.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="item rounded-0 border-0 item-7">
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/micro-lab_blur.mp4" type="video/mp4">
+                  </video>
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/micro-lab_sharp.mp4" type="video/mp4">
+                  </video>
+              </div>
+              <div class="item rounded-0 border-0 item-9">
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                    <source src="static/videos/toycar_blur.mp4" type="video/mp4">
+                </video>
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                    <source src="static/videos/toycar_sharp.mp4" type="video/mp4">
+                </video>
+            </div>
+              <div class="item rounded-0 border-0 item-10">
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                    <source src="static/videos/windmill_blur.mp4" type="video/mp4">
+                </video>
+                <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                    <source src="static/videos/windmill_sharp.mp4" type="video/mp4">
+                </video>
+            </div>
+              <div class="item rounded-0 border-0 item-book">
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/poster_blur.mp4" type="video/mp4">
+                  </video>
+                  <video poster="" autoplay muted loop preload="none" class="w-auto" style="height:22vh;">
+                      <source src="static/videos/poster_sharp.mp4" type="video/mp4">
+                  </video>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+</section>
+<br/>
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">Citation</h2>
+        <p>If you find our work helpful, please consider cite us:</p>
+        <pre><code>@inproceedings{lu2025bard,
+  title={Bard-gs: Blur-aware reconstruction of dynamic scenes via gaussian splatting},
+  author={Lu, Yiren and Zhou, Yunlai and Liu, Disheng and Liang, Tuo and Yin, Yu},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={16532--16542},
+  year={2025}
+}
+</code></pre>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">nerfies</a>.</p>
+                    <p>
+                        This website is licensed under a <a rel="license"
+                                                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                    <p>
+                        This means you are free to borrow the <a
+                            href="https://github.com/vulab-AI/BARD-GS">source code</a> of this website,
+                        we just ask that you link back to this page in the footer.
+                        Please remember to remove the analytics code included in the header of the website which
+                        you do not want on your website.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

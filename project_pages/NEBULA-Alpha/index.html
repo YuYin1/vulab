@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description"
+          content="NEBULA: A Unified Ecosystem for Vision-Language-Action Agent Development & Evaluation">
+    <meta name="keywords" content="Embodied AI, Vision-Language-Action, Agent Evaluation, Robot-Centric">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NEBULA: A Unified Ecosystem for Vision-Language-Action Agent Development & Evaluation</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="./static/images/nebula_logo.png">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><img src="./static/images/nebula_logo.png" width="42" style="margin-right: 10px;">NEBULA: A Unified Ecosystem for Emobodied AI Agent Development & Evaluation</h1>            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://github.com/JerryPeng0201" target="_blank">Jierui Peng</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/YanyanZhang3106" target="_blank">Yanyan Zhang</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/YichengDuan" target="_blank">Yicheng Duan</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://tuo-liang.github.io/" target="_blank">Tuo Liang</a>,</span>
+              <span class="author-block">
+                <a href="https://case.edu/engineering/about/faculty-and-staff-directory/vipin-chaudhary" target="_blank">Vipin Chaudhary</a>,</span>
+              <span class="author-block">
+                <a href="https://yin-yu.github.io/" target="_blank">Yu Yin</a><sup>†</sup>
+              </span>
+              </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Computer & Data Science Department</span>
+              </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Case Western Reserve University</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Equal Contribution&nbsp;&nbsp;&nbsp;<sup>†</sup>Corresponding Author</small></span>
+                  </div>
+
+                  <!-- ArXiv abstract Link -->
+                  <span class="link-block">
+                    <a href="https://arxiv.org/abs/2510.16263" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/JerryPeng0201/NEBULA" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Github</span>
+                  </a>
+                </span>
+
+                <!-- HuggingFace link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-cube"></i>
+                  </span>
+                  <span>HuggingFace (Coming soon)</span>
+                </a>
+              </span>
+
+                <!-- Leaderboard link -->
+                <span class="link-block">
+                  <a href="" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-trophy"></i>
+                  </span>
+                  <span>Leaderboard (Coming soon)</span>
+                </a>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="item" style="text-align: center;">
+        <!-- Your image here -->
+        <img src="static/images/overall_update.png" alt="intro_example" />
+      </div>
+      <h2 class="subtitle has-text-justified">
+            <b><span style="color: red;">NEBULA</span> unifies fragmented VLA datasets and APIs for cross-dataset training and benchmarking. It introduces a <span style="color: blue;">dual-axis evaluation</span> (capability and stress testing) with <span style="color: blue;">controlled variable isolation</span> for skill-specific diagnosis. With <span style="color: blue;">hierarchical task difficulty</span>, multi-modal annotations, and visual performance summaries, NEBULA converts success rate into a diagnostic signal, exposing failure modes and reliability limits.</b>
+      </h2> 
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+<!-- Abstract -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Abstract</h2>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          The evaluation of Vision-Language-Action (VLA) agents is hindered by the coarse, end-task success metric that fails to provide precise skill diagnosis or measure robustness to real-world perturbations. 
+          This challenge is exacerbated by a fragmented data landscape that impedes reproducible research and the development of generalist models. 
+          To address these limitations, we introduce <b>NEBULA</b>, a unified ecosystem for single-arm manipulation that enables diagnostic and reproducible evaluation. NEBULA features a novel <b>dual-axis evaluation</b> protocol that combines fine-grained <i>capability tests</i> for precise skill diagnosis with systematic <i>stress tests</i> that measure robustness.
+          A <b>standardized API</b> and a <b>large-scale, aggregated dataset</b> are provided to reduce fragmentation and support cross-dataset training and fair comparison.
+          Using NEBULA, we demonstrate that top-performing VLAs struggle with key capabilities such as spatial reasoning and dynamic adaptation, which are consistently obscured by conventional end-task success metrics. By measuring both what an agent can do and when it does so reliably, NEBULA provides a practical foundation for robust, general-purpose embodied agents.
+        </p>
+    </div>
+  </div>
+</section>
+<!-- End Abstract -->
+
+<!-- Task Summary -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Dual-Axis Evaluation Framework</h2>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <h3 class="subtitle is-4"><b>Capability Test</b></h3>
+      </div>
+      <div class="item">
+        <img src="static/images/capability_tasks.png" alt="Capability Tasks"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          <b>Examples of NEBULA Capability Test task</b> across six core capabilities (Control, Perception, Dynamic Adaptation, Language, Spatial Reasoning, and Robustness) organized into three difficulty levels. Tasks isolate specific skills with controlled complexity. <span style="color: green;">Green</span> marks objects, <span style="color: red;">red</span> marks targets, and <span style="color: blue;">blue</span> indicates contextual cues. <b><u>Bold underlined</u></b> text shows actions; <i><u>italic underlined</u></i> text gives clarifications.
+        </p>
+        <p>
+          The core impact of this design is its <span style="color: red;">diagnostic power</span>. By <span style="color: red;">isolating a single capability per task</span>, it moves beyond ambiguous success rates to pinpoint the precise cause of failure. This transforms a simple performance metric into a clear, interpretable signal, revealing specific weaknesses (e.g., poor spatial reasoning) that traditional benchmarks would otherwise obscure.
+        </p>
+      </div>
+      
+      <div class="columns is-centered has-text-centered">
+        <h3 class="subtitle is-4"><b>Stress Test</b></h3>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/stress_test.png" alt="Stress Test" style="width: 70%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          This figure provides examples from the <b>NEBULA Stress Test</b> suite, illustrating the Stability and Adaptability tasks across three progressive difficulty levels. The Stability Score tasks evaluate the smoothness of an agent's actions by increasing the precision required, moving from a simple stack at Level 1 to a more complex, multi-object arrangement at Level 3. The Adaptability tasks assess an agent's capacity to adjust to dynamic changes during execution, beginning with a sudden object movement (Level 1), advancing to a mid-task instruction change (Level 2), and culminating in a command abort that requires rapid re-planning (Level 3).
+        </p>
+        <p>
+          The true impact of our Stress Tests is <span style="color: red;">revealing an agent's breaking point</span>. By applying targeted pressure, they move beyond success rates to uncover hidden bottlenecks and predict an agent's readiness for the real world. This diagnostic approach allows us to understand <span style="color: blue;">why</span> an agent fails in different scenarios by directly linking its system responsiveness (e.g., inference speed) to its ability to handle different difficulty levels.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Task Summary -->
+
+<!-- NEBULA Dataset -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">NEBULA Data</h2>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <h3 class="subtitle is-4"><b>Native Dataset</b></h3>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/data_table.png" alt="NEBULA Dataset" style="width: 50%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          To facilitate reproducible and scalable research, NEBULA provides <span style="color: blue;">two large-scale, aggregated dataset variants</span> designed to balance completeness with ease of use. All data is collected within NEBULA Ecosystem, ensuring consistency across all tasks.
+        </p>
+        <ul>
+          <li><b>Alpha:</b> The <span style="color: blue;">full-scale dataset</span> containing over 222,000 expert demonstrations across the five core capability families. This version is generated entirely using expert trajectories from motion planning and is ideal for training robust, large-scale models.</li>
+          <li><b>Beta:</b> A <span style="color: blue;">compact, lightweight version</span> containing 10% of the data per task, designed for rapid development, prototyping, and ablation studies. For high-difficulty tasks, this version includes data from human teleoperation to capture more diverse and realistic behaviors.</li>
+        </ul>
+        <p>
+          Both datasets provide <b>multimodal inputs</b>, including videos, language instructions, and trajectories, and are available in standardized PyTorch and TFRecord formats to reduce integration overhead.
+        </p>
+        <p>
+          To access the NEBULA datasets, please refer to our <a href="https://huggingface.co/jerrypeng999/CLAIRE" target="_blank">HuggingFace</a>.
+        </p>
+      </div>
+      <div class="columns is-centered has-text-centered">
+        <h3 class="subtitle is-4"><b>Customize Your Data with NEBULA</b></h3>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/MP_banner.png" alt="Motion Planning" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/teleop_banner.png" alt="Teleoperation" style="width: 100%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          NEBULA also provides the tools necessary for you to generate your own customized datasets. We support two primary methods for data collection: automated Motion Planning and manual Human Teleoperation.
+        </p>
+        <ul>
+          <li><b>Motion Planning:</b> For generating large-scale expert trajectories automatically, you can use our motion planning pipeline. This process utilizes robot descriptions and motion planners within our simulation environments to generate optimal solutions and collect data systematically.</li>
+          <li><b>Human Teleoperation:</b> To capture more diverse and realistic behaviors for complex tasks, we provide an intuitive teleoperation interface. This system allows you to manually control the robot and record demonstrations. As shown, it is designed for cross-platform use, supporting both macOS and Ubuntu.</li>
+        </ul>
+        <p>
+          For more details, please refer to our <a href="https://github.com/JerryPeng0201" target="_blank">GitHub</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End NEBULA Dataset -->
+
+<!-- NEBULA Unified Data Platform -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+  <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">NEBULA Unified Data Platform</h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/data.png" alt="NEBULA Unified Data Platform" style="width: 70%; height: auto;"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          NEBULA introduces a unified data platform designed to streamline research and foster collaboration. Our platform ingests these varied data formats into a single, standardized NEBULA format, providing the core infrastructure for both unified training and reproducible evaluation. This allows researchers to focus on innovation rather than data engineering.
+        </p>
+        <ul>
+          <li><b>Unified & Structured Data Format:</b> Introducing a standardized data schema for consistent representation of robot interactions in an episode structure. Consolidating observations, actions, and metadata for plug-and-play compatibility across datasets.</li>
+          <li><b>Extensible, Robot-Agnostic Architecture:</b> Our platform is not hardcoded to specific hardware. Instead, robot properties are defined in a centralized configuration system, allowing support for various arm setups, gripper types, and sensor configurations.</li>
+          <li><b>Powerful and Intuitive Python SDK:</b> Includes a high-level Python API that abstracts low-level data loading and indexing. This enables researchers to easily query, filter, sample data, and perform machine learning tasks like train-test splits with minimal code.</li>
+          <li><b>Seamless Model Integration:</b> Provides model input adapters for widely used VLA architectures. These adapters bridge the gap between the unified data format and a model's expected input, allowing for immediate benchmarking with minimal integration overhead.</li>
+        </ul>
+      </div>
+        </div>
+        </div>
+</section>
+<!-- End NEBULA Unified Data Platform -->
+
+<!-- NEBULA Simulation -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">NEBULA Simulation</h2>
+        </div>
+      <div class="item" style="text-align: center;">
+        <video autoplay muted loop playsinline controls preload="metadata" style="width: 70%; height: auto;">
+          <source src="static/videos/simulation.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+                </video>
+            </div>
+      <div class="content has-text-justified">
+        <p>
+          This video showcases a variety of NEBULA tasks simulated across multiple skill dimensions, illustrating our platform's diverse manipulation scenarios. Each clip demonstrates interactions rendered from six distinct camera viewpoints and three sensory modalities (RGB, depth, and segmentation) enabling rich, multi-perspective observation of the agent's behavior. The tasks span key capability families including perception, control, spatial reasoning, and dynamic adaptation, highlighting NEBULA's support for structured, multi-view, and multi-modal benchmarking in embodied AI research.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End NEBULA Simulation -->
+
+<!-- What does NEBULA reveal -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+  <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Current Bottlenecks</h2>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/overview_capability.png" alt="NEBULA capability analysis"/>
+      </div>
+      <div class="content has-text-justified">
+        <p>
+          This figure presents two radar charts summarizing model performance across six <b><i>capability task families</i></b>.<br>
+          <b>Left Chart</b>: the mean and standard deviation of success rates across all models for each task family, broken down by three difficulty levels.<br>
+          <b>Right Chart</b>: displays the average performance of individual models on Easy and Medium tasks.
+        </p>
+        <p>
+         => <b><i><span style="color: red;">Key Weaknesses</span></i></b>: Spatial Reasoning remains a key bottleneck for most models, while nearly all fail at Dynamic Adaptation and Robustness.
+        </p>
+      </div>
+      <div class="item" style="text-align: center;">
+        <img src="static/images/stress_eval.png" alt="NEBULA stress test results"/>
+        </div>
+      <div class="content has-text-justified">
+        <p>
+          This figure shows the <b><i>stress test evaluations</i></b> for four different models, comparing their performance across three increasing stress levels. The evaluation consists of four distinct tests: inference frequency, measured in Hertz; latency, measured in milliseconds; a stability score, on a scale from 0 to 1; and adaptability, measured by success rate.
+        </p>
+        <p>
+          => <b><i><span style="color: red;">Key Weaknesses</span></i></b>: Under pressure, most VLAs fail to handle dynamic changes due to critical drops in inference speed and control stability, indicating they are not ready for real-world deployment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End What does NEBULA reveal -->
+
+<!-- Acknowledgements -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+  <div class="hero-body">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Acknowledgements</h2>
+      </div>
+          <div class="content has-text-justified">
+        <p>
+          NEBULA is built on top of the excellent work from <b>Sapien</b> and <a href="https://github.com/haosulab/ManiSkill/tree/main" target="_blank"><b>ManiSkill3</b></a>. We have leveraged their logic and assets throughout the development of our platform. We express our deep gratitude and sincere respect to their development teams for making such powerful tools openly available to the community.
+        </p>
+        <p style="text-align: center; font-size: 1.5rem;">
+          Salute! 🫡
+        </p>
+      </div>
+      </div>
+  </div>
+</section>
+<!-- End Acknowledgements -->
+
+
+<section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+        <h2 class="title">Citation</h2>
+        <p>If you find our work helpful, please consider cite us:</p>
+        <pre><code>@misc{peng2025nebulaevaluatevisionlanguageactionagents,
+          title={NEBULA: Do We Evaluate Vision-Language-Action Agents Correctly?}, 
+          author={Jierui Peng, Yanyan Zhang, Yicheng Duan, Tuo Liang, Vipin Chaudhary, Yu Yin},
+          year={2025},
+          eprint={2510.16263},
+          archivePrefix={arXiv},
+          primaryClass={cs.RO},
+          url={https://arxiv.org/abs/2510.16263}, 
+    }</code></pre>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content">
+                    <p>Website template borrowed from <a href="https://vulab-ai.github.io/YESBUT_Homepage/">YesBut Benchmark</a>.</p>
+                    <p>
+                        This website is licensed under a <a rel="license"
+                                                            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                        Commons Attribution-ShareAlike 4.0 International License</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

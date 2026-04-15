@@ -10,7 +10,7 @@ summary: We utilize 3DGS serves as a persistent spatial memory for embodied navi
 image: /img/research/research-placeholder-01.svg
 video: /img/research/GSMem.mp4
 video_poster: /img/research/GSMem_demo_poster.jpg
-external_url: https://yiren-lu.com/project_pages/gsmem/
+external_url: /project_pages/gsmem/
 updated: 2026-03-30
 show_sidebar: false
 hero_height: is-small

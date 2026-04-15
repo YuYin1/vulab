@@ -4,7 +4,7 @@ subtitle: PhD Student
 description: Tuo Liang, PhD student at VU Lab.
 group: PhD Students
 order: 4
-image: /img/team/tuoliang.png
+image: /img/team/tuoLiang.png
 expertise: Computer Vision, Vision-Language Models, and Visual Reasoning.
 email: tuo.liang@case.edu
 personal_page: https://tuo-liang.github.io/

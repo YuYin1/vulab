@@ -9,9 +9,9 @@ tags:
   - Survey
 summary: A comprehensive survey addressing how VLMs currently lack spatial intelligence, covering recent advances, taxonomies, and evaluations toward building spatially intelligent AI.
 image: /img/research/Spatial_VLM.jpg
-video: /img/highlights/spatial_survey.mov
+video: /img/highlights/spatial_survey.mp4
 updated: 2025-10-01
-external_url: https://dishengll.github.io/Awesome-Spatial-VLMs
+external_url: /project_pages/awesome-spatial-vlms/
 show_sidebar: false
 hero_height: is-small
 permalink: /research/spatial-vlm-survey/
@@ -28,5 +28,5 @@ Disheng Liu, Tuo Liang, Zhe Hu, Jierui Peng, Yiren Lu, Yi Xu, Yun Fu, Yu Yin
 ## Links
 
 - [Paper (TechRxiv)](https://www.techrxiv.org/users/992599/articles/1354538/master/file/data/Spatial_VLM_Survey_Techrxiv/Spatial_VLM_Survey_Techrxiv.pdf)
-- [Project Website](https://vulab-ai.github.io/Awesome-Spatial-VLMs/)
+- [Project Website](/project_pages/awesome-spatial-vlms/)
 - [GitHub](https://github.com/vulab-AI/Awesome-Spatial-VLMs)

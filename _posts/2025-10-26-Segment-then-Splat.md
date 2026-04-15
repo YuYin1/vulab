@@ -12,7 +12,7 @@ tags_level2:
   - Open-Vocabulary Segmentation
 summary: We propose Segment then Splat, an Open-vocabulary 3D segmentation method that reverses the long established approach of “segmentation after reconstruction” by dividing Gaussians into distinct object sets before reconstruction. 
 image: /img/research/segment-then-splat.gif
-external_url: https://yiren-lu.com/project_pages/segment-then-splat/
+external_url: /project_pages/segment-then-splat/
 show_sidebar: false
 hero_height: is-small
 permalink: /research/Segment-then-Splat/

@@ -41,6 +41,9 @@ exclude:
   - clean-theme.gemspec
   - Gemfile.lock
   - node_modules
+  - project_pages/**/*.md
+  - project_pages/**/*.markdown
+  - project_pages/Awesome-Spatial-VLMs/index.md
   - vendor/bundle/
   - vendor/cache/
   - vendor/gems/
@@ -102,6 +105,8 @@ collections:
     layout: product
     image: https://picsum.photos/id/16/800/600
     show_sidebar: false
+  project_pages:
+    output: true
 
 social:
   facebook: https://www.facebook.com/
