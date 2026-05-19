@@ -15,8 +15,56 @@
     <button class="button0" type="button" onclick="toggle{{ entry.key | replace: '-','' | replace: ':','' }}()">bibtex</button>
 
     <script>
+        if (!window.cleanPublicationBibtex) {
+            window.cleanPublicationBibtex = function(bibtex) {
+                var omittedFields = {
+                    abstract: true,
+                    code: true,
+                    data: true,
+                    dataset: true,
+                    note: true,
+                    pdf: true,
+                    preprint: true,
+                    status: true,
+                    video: true,
+                    website: true
+                };
+                var lines = bibtex.replace(/\r\n/g, '\n').split('\n');
+                var cleanedLines = [];
+                var skippingField = false;
+
+                lines.forEach(function(line) {
+                    var fieldMatch = line.match(/^\s*([A-Za-z][A-Za-z0-9_-]*)\s*=/);
+                    if (fieldMatch) {
+                        skippingField = !!omittedFields[fieldMatch[1].toLowerCase()];
+                        if (!skippingField) {
+                            cleanedLines.push(line);
+                        }
+                        return;
+                    }
+                    if (/^\s*}\s*$/.test(line)) {
+                        skippingField = false;
+                        cleanedLines.push(line);
+                        return;
+                    }
+                    if (!skippingField) {
+                        cleanedLines.push(line);
+                    }
+                });
+
+                return cleanedLines.join('\n').replace(/,\s*\n(\s*}\s*)$/, '\n$1');
+            };
+        }
+
         function toggle{{ entry.key | replace: '-','' | replace: ':','' }}() {
             var panel = document.getElementById('a{{ entry.key }}');
+            if (panel && !panel.dataset.cleaned) {
+                var bibtexContent = panel.querySelector('pre');
+                if (bibtexContent) {
+                    bibtexContent.textContent = window.cleanPublicationBibtex(bibtexContent.textContent);
+                    panel.dataset.cleaned = 'true';
+                }
+            }
             if (panel.style.display === 'block') {
                 panel.style.display = 'none';
             } else {
@@ -71,7 +119,7 @@
         <a href="{{ entry.pdf | escape }}" aria-label="pdf link for paper"><input type="button" class="button4" value="pdf" /></a>
     {% endif %}
     {% if entry.website %}
-        <a href="{{ entry.website | escape }}" aria-label="website link for paper"><input type="button" class="button4" value="website" /></a>
+        <a href="{{ entry.website | escape }}" aria-label="website link for paper"><input type="button" class="button6" value="website" /></a>
     {% endif %}
     {% if entry.url %}
         <a href="{{ entry.url | escape }}" aria-label="link for paper"><input type="button" class="button4" value="link" /></a>
@@ -83,7 +131,7 @@
         <a href="{{ entry.code | escape }}" aria-label="code link for paper"><input type="button" class="button3" value="code" /></a>
     {% endif %}
     {% if entry.data %}
-        <a href="{{ entry.data | escape }}" aria-label="data link for paper"><input type="button" class="button3" value="data" /></a>
+        <a href="{{ entry.data | escape }}" aria-label="data link for paper"><input type="button" class="button7" value="data" /></a>
     {% endif %}
 </div>
 

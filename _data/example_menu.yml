@@ -7,8 +7,8 @@
       items:
         - name: Landing Page With Callouts
           link: /landing/
-        - name: Products
-          link: /products/
+        - name: Projects
+          link: /projects/
         - name: Sponsors Page
           link: /sponsors/
         - name: Image Gallery

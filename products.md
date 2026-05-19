@@ -1,9 +1,9 @@
 ---
-title: Products
-subtitle: Check out our range of products
-layout: product-category
+title: Projects
+subtitle: Explore VU Lab project pages
+layout: page
 show_sidebar: false
-sort: price
+redirect_to: /projects/
 ---
 
-This is an example products page you can use to display a simple listing of your products and their ratings and reviews.
+This page has moved to [Projects](/projects/).

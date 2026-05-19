@@ -14,11 +14,17 @@ hero_height: is-small
 .csl-title,
 .csl-author,
 .csl-event,
+.csl-note,
 .csl-editor,
 .csl-venue {
     display: block;
     position: relative;
     font-size: 16px;
+}
+
+.csl-note {
+    color: #ff0000;
+    font-weight: 700;
 }
 
 .csl-title b {
@@ -59,7 +65,9 @@ hero_height: is-small
 .button2,
 .button3,
 .button4,
-.button5 {
+.button5,
+.button6,
+.button7 {
     border: none;
     color: white;
     padding: 2px 4px;
@@ -78,6 +86,8 @@ hero_height: is-small
 .button3 { background-color: #059669; } /* cite / code */
 .button4 { background-color: #D97706; } /* link */
 .button5 { background-color: #DC2626; } /* video */
+.button6 { background-color: #0190a3; } /* website */
+.button7 { background-color: #4e46e5d6; } /* data */
 
 @media (min-width: 48em) {
     .button0 {
@@ -99,7 +109,9 @@ hero_height: is-small
     .button2,
     .button3,
     .button4,
-    .button5 {
+    .button5,
+    .button6,
+    .button7 {
         border: none;
         color: white;
         padding: 4px 8px;

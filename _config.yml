@@ -101,7 +101,7 @@ collections:
     output: true
     permalink: /team/:name/
   products: 
-    output: true
+    output: false
     layout: product
     image: https://picsum.photos/id/16/800/600
     show_sidebar: false
@@ -109,10 +109,7 @@ collections:
     output: true
 
 social:
-  facebook: https://www.facebook.com/
-  instagram: https://www.instagram.com/
-  threads: https://www.threads.net/
-  tiktok: https://www.tiktok.com/
-  x: https://www.x.com/
-  youtube: https://www.youtube.com/
+  github: https://github.com/vulab-AI
+  huggingface: https://huggingface.co/VULab
+  cwru: https://engineering.case.edu/computer-and-data-sciences
   

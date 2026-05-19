@@ -17,6 +17,7 @@ citation_keys:
   - lu2025bard
   - hu2025praxis
   - hu2024cracking
+  - liang2026yesbut
 ---
 
 I am a tenure-track Assistant Professor in the Department of Computer & Data Science at Case Western Reserve University, where I lead the **VU Lab**. My research focuses on <u><i>computer vision and 3D vision</i></u>, <u><i>multimodal large language models (MLLMs)</i></u>, and <u><i>embodied AI systems</i></u>, with the goal of building **spatially grounded AI systems** that can perceive, reason, and act in complex real-world environments.
@@ -38,10 +39,12 @@ At VU Lab, we study **3D vision and spatial representation**, including Gaussian
 
 ## Selected Awards
 
+* UCITE Glennan Fellowship, Case Western Reserve University, 2026
+* Breaking Boundaries Seed Grant, Case Western Reserve University, 2026
 * OpenAI Researcher Access Program, 2025
 * Teaching Award, Department of Computer and Data Sciences, Case Western Reserve University, USA, 2024
 * PhD Spotlight, Northeastern University, USA, 2023
-* Women Who Empower Innovator Awards semi-finalists, Northeastern University, USA, 2023
+<!-- * Women Who Empower Innovator Awards semi-finalists, Northeastern University, USA, 2023 -->
 * Dissertation Fellowship, Northeastern University, USA, 2023
 * NSF I-Corps Grant, 2022
 * PhD Network Grant, Northeastern University, USA, 2019, 2023

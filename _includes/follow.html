@@ -1,5 +1,25 @@
 {% if site.social %}
     <div class="buttons is-centered mt-6 mb-6">
+        {% if site.social.github %}
+            <a href="{{ site.social.github }}" class="button is-medium" aria-label="VU Lab GitHub">
+                <span class="icon is-medium">
+                    <i class="fa-brands fa-github fa-xl"></i>
+                    <span class="is-sr-only">GitHub</span>
+                </span>
+            </a>
+        {% endif %}
+        {% if site.social.huggingface %}
+            <a href="{{ site.social.huggingface }}" class="button is-medium" aria-label="VU Lab Hugging Face" style="height: 3.12rem; width: 3.12rem; padding: 0; justify-content: center;">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="" style="height: 1.9rem; width: 1.9rem; object-fit: contain;">
+                <span class="is-sr-only">Hugging Face</span>
+            </a>
+        {% endif %}
+        {% if site.social.cwru %}
+            <a href="{{ site.social.cwru }}" class="button is-medium" aria-label="CWRU Computer and Data Sciences" style="height: 3.12rem; width: 5.25rem; padding: 0; justify-content: center;">
+                <img src="https://case.edu/brand/sites/default/files/2023-05/CWRU_Acronym-logo-brand.jpg" alt="" style="height: 1.9rem; max-width: 5.05rem; width: auto; object-fit: contain;">
+                <span class="is-sr-only">CWRU Computer and Data Sciences</span>
+            </a>
+        {% endif %}
         {% if site.social.facebook %}
             <a href="{{ site.social.facebook }}" class="button is-medium">
                 <span class="icon is-medium">

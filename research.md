@@ -372,9 +372,27 @@ document.addEventListener('DOMContentLoaded', function() {
 		};
 	});
 
+	var trailingFilterTags = ['Benchmarking', 'Survey'];
+	var trailingFilterTagOrder = new Map(trailingFilterTags.map(function(tag, index) {
+		return [tag.toLowerCase(), index];
+	}));
+
 	var allTags = Array.from(new Set(cards.flatMap(function(card) {
 		return card.filterTags;
-	}))).sort();
+	}))).sort(function(a, b) {
+		var aTrailingIndex = trailingFilterTagOrder.has(a.toLowerCase()) ? trailingFilterTagOrder.get(a.toLowerCase()) : -1;
+		var bTrailingIndex = trailingFilterTagOrder.has(b.toLowerCase()) ? trailingFilterTagOrder.get(b.toLowerCase()) : -1;
+		if (aTrailingIndex !== -1 || bTrailingIndex !== -1) {
+			if (aTrailingIndex === -1) {
+				return -1;
+			}
+			if (bTrailingIndex === -1) {
+				return 1;
+			}
+			return aTrailingIndex - bTrailingIndex;
+		}
+		return a.localeCompare(b);
+	});
 
 	var buttons = new Map();
 
