@@ -1,6 +1,6 @@
 ---
 title: Home
-subtitle: We research <strong>Visual Understanding</strong> and <strong>Spatial Intelligence</strong>
+subtitle: We research <strong>Visual Understanding</strong> and <strong>Spatial Intelligence</strong> at Case Western Reserve University
 layout: page
 show_sidebar: false
 hero_image: /img/about.jpg
@@ -85,11 +85,14 @@ hero_links:
 
 # About Us
 
-VU Lab studies visual understanding and spatial intelligence for robust embodied systems. We focus on perception, spatial reasoning, and decision-making methods that help intelligent agents interpret complex environments and act reliably in the real world.
+VU Lab is a research group in the *Department of Computer and Data Sciences* at [Case Western Reserve University](https://case.edu) (CWRU) in Cleveland, Ohio, led by Prof. Yu Yin.
+
+We study visual understanding and spatial intelligence for robust embodied systems. We focus on perception, spatial reasoning, and decision-making methods that help intelligent agents interpret complex environments and act reliably in the real world.
 
 Our work spans scene understanding, 3D perception, language-guided reasoning, and spatial intelligence. This homepage now provides direct entry points to the lab team and research overview.
 
 # Highlights
+
 {% assign posts = site.posts | where_exp: "post", "post.categories contains 'highlights'" %}
 <div class="columns is-multiline home-highlight-grid">
   {% for post in posts %}
